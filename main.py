@@ -11,7 +11,15 @@ import time
 import stat
 import uuid
 
-from tui import choose, progress, choose_select, custom_input
+from tui import choose, choose_select, custom_input
+
+from utils import ansi_supported
+
+if not ansi_supported:
+    print('This terminal doesn\'t support ANSI codes, please, try to change to another terminal.')
+    input('Type "CONTINUE" to continue, press enter to kill the process > ')
+    exit(0)
+
 
 def request_release(t="Please, select a release"):
     releases = requests.get('https://api.github.com/repos/sdfxf31/Descendant-Plus/releases').json()
@@ -155,6 +163,15 @@ def download(release,root_path=lambda name:f'downloads/Descendant-{name}',alert=
     if alert:print(f'The release was downloaded successfully. Check {Color.GREEN}"{P}"{Effect.OFF}')
 
 
+
+
+
+
+
+
+
+
+
 if __name__ == '__main__':
     console = Console()
     console.print(f'Welcome to [green]Descendant Atlas[/green]!\n[dim](This project is not affiliated with Gerg or the Descendant+ team)[/dim]\nMade by: [blue][link=https://github.com/Mikequez12]Mikequez12[/link][/blue]')
@@ -169,7 +186,6 @@ if __name__ == '__main__':
             match choose([
                 'Import mod',
                 'Export mod',
-                'Browse mods'
             ], title='Please, select an option'):
                 case 'Export mod':
                     dir_name = choose([
@@ -180,7 +196,7 @@ if __name__ == '__main__':
                         print('No releases are installed. Please install at least one to continue.')
                         exit(0)
                     
-                    MOD_NAME = custom_input(title='Select a name for the mod')
+                    MOD_NAME = custom_input(title='Select a name for the mod',accept=lambda _:_.strip() != '',error_msg='Invalid path')
                     if os.path.exists(f'mods/{MOD_NAME}') or os.path.exists(f'mods/{MOD_NAME}.dscmod') or os.path.exists(f'mods/{MOD_NAME}.zip'):
                         if choose([
                             'Abort',

@@ -39,13 +39,14 @@ python atlas.py
 ## Creating a mod
 
 1. Download a Descendant+ release.
-2. Select **Mods → Export mod**.
-3. Choose:
+2. Create and save your changes using a `structure block`.
+3. Select **Mods → Export mod**.
+4. Choose:
    - Datapacks
    - Resource packs
    - Structures
-4. Configure structure placement (optional).
-5. A `.dscmod` package will be created.
+5. Configure structure placement (optional).
+6. A `.dscmod` package will be created.
 
 ## Applying a mod
 
@@ -57,6 +58,36 @@ python atlas.py
    - merge resource packs,
    - import structures,
    - patch the required load functions.
+
+## FAQ
+
+**Q: Does Atlas cause issues with Descendant+?**  
+**A:** No issues caused by Atlas itself are currently known. However, third-party mods or newly released versions of Descendant+ may introduce incompatibilities. If you find a bug that appears to be caused by Atlas, please report it.
+
+---
+
+**Q: Does Atlas use real Minecraft mods?**  
+**A:** No. Atlas uses `.dscmod` files, which package datapacks, resource packs, structures and other world modifications.
+
+---
+
+**Q: Does Atlas work on Linux?**  
+**A:** Yes. Atlas is designed to be cross-platform and should work on Linux.
+
+---
+
+**Q: How does Atlas work?**  
+**A:** Atlas downloads releases from the Descendant+ GitHub repository and applies modifications locally. If you're curious about the implementation, feel free to read the source code in `main.py`.
+
+---
+
+**Q: Is Atlas a virus?**  
+**A:** No. Atlas is open source and only downloads and modifies files from GitHub repositories.
+
+---
+
+**Q: Where can I find Atlas mods?**  
+**A:** There is currently no official repository for Atlas mods. You'll need to obtain `.dscmod` files directly from their creators.
 
 ## Project structure
 

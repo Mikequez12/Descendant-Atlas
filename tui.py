@@ -2,13 +2,18 @@ import os
 import sys
 import re
 
-from colorist import Effect
+from colorist import Effect, Color
+
 
 if os.name == "nt":
     import msvcrt
 else:
     import termios
     import tty
+
+from utils import unicode_supported
+
+_default_pointer = '❯' if unicode_supported else '>'
 
 
 def _read_key():
@@ -66,14 +71,14 @@ def cls(n):
 def choose(
     options,
     *,
-    title=None,
-    pointer=f"❯ {Effect.REVERSE}",
+    title='',
+    pointer=f"{_default_pointer} {Effect.REVERSE}",
     header=None,
     clear=True,
     wrap=True,
     pad='  ',
     return_index=False,
-    on_select_pointer=f" ❯{Effect.REVERSE}"
+    on_select_pointer=f" {_default_pointer}{Effect.REVERSE}"
 ):
     if len(options) == 0:return None
 
@@ -82,7 +87,7 @@ def choose(
         values = list(options.values())
         options = list(options.keys())
 
-    add = 2 + bool(header)
+    add = 1 + bool(title is not None) + bool(header)
 
     index = 0
 
@@ -121,7 +126,7 @@ def choose(
         if clear:
             cls(len(options) + add)
             
-        if title:
+        if title is not None:
             print(f'╭╴{title}')
 
         if header:
@@ -176,13 +181,13 @@ def choose_select(
     options : dict,
     *,
     title=None,
-    pointer=f"❯ {Effect.REVERSE}",
+    pointer=f"{_default_pointer} {Effect.REVERSE}",
     header=None,
     clear=True,
     wrap=True,
     pad='  ',
     return_index=False,
-    on_select_pointer=f" ❯{Effect.REVERSE}"
+    on_select_pointer=f" {_default_pointer}{Effect.REVERSE}"
 ):
     if len(options) == 0:return {}
 
@@ -318,19 +323,26 @@ def progress(value, total=100, *, width=None, prefix="", suffix="", end_cmd='\n'
 
     _last_progress_len = len(text)
 
-def custom_input(title,prefix='❯ '):
+def custom_input(title,prefix=f'{_default_pointer} ',accept=lambda _:True,error_msg='Invalid value',error_format=Color.RED,_as_error=False):
     cols,rows = os.get_terminal_size()
 
-    print(f'╭╴{title}')
+    italic = "\x1b[3m"
+
+    print(f'╭╴{title+(f' {error_format}{italic+error_msg+Effect.OFF}' if _as_error else '')}')
     print('')
     print('╰╴')
 
     cls(2)
 
     t = input(f'│ {prefix}')
-    cls(1)
-    italic = "\x1b[3m"
-    print(f'│ {prefix}{Effect.REVERSE+italic}{t}{Effect.OFF}')
-    print()
 
-    return t
+    if accept(t):
+        cls(1)
+        print(f'│ {prefix}{Effect.REVERSE+italic}{t}{Effect.OFF}')
+        print()
+        return t
+    else:
+        cls(1)
+        print(f'| {prefix}'+' '*(cols-len(prefix)-2))
+        cls(2)
+        return custom_input(title,prefix,accept,error_msg,error_format,_as_error=True)
