@@ -1,0 +1,1014 @@
+14171 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\WS2_32.dll' due to global exclusion rules.
+14171 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\unicodedata.pyd'
+14174 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14175 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14175 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14175 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14175 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14175 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14175 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14176 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14176 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14176 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14176 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14176 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14176 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_overlapped.pyd'
+14181 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14181 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14181 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14181 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14181 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14182 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14182 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14182 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14182 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14182 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14182 DEBUG: Processing dependency, name: 'WS2_32.dll', resolved path: 'C:\\WINDOWS\\system32\\WS2_32.dll'
+14182 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\WS2_32.dll' due to global exclusion rules.
+14182 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_ssl.pyd'
+14188 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14188 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14188 DEBUG: Processing dependency, name: 'CRYPT32.dll', resolved path: 'C:\\WINDOWS\\system32\\CRYPT32.dll'
+14188 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\CRYPT32.dll' due to global exclusion rules.
+14188 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14189 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14189 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14189 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14189 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14189 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14189 DEBUG: Processing dependency, name: 'libssl-3.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libssl-3.dll'
+14189 DEBUG: Collecting dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libssl-3.dll' as 'libssl-3.dll'.
+14189 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14190 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14190 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14190 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14190 DEBUG: Processing dependency, name: 'WS2_32.dll', resolved path: 'C:\\WINDOWS\\system32\\WS2_32.dll'
+14190 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\WS2_32.dll' due to global exclusion rules.
+14190 DEBUG: Processing dependency, name: 'libcrypto-3.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libcrypto-3.dll'
+14190 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libcrypto-3.dll' due to prior processing.
+14190 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_queue.pyd'
+14193 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14194 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14194 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14194 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14194 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14194 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14194 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14194 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14195 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_ctypes.pyd'
+14200 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14200 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14200 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14201 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14201 DEBUG: Processing dependency, name: 'OLEAUT32.dll', resolved path: 'C:\\WINDOWS\\system32\\OLEAUT32.dll'
+14201 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\OLEAUT32.dll' due to global exclusion rules.
+14201 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14201 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14201 DEBUG: Processing dependency, name: 'ole32.dll', resolved path: 'C:\\WINDOWS\\system32\\ole32.dll'
+14201 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\ole32.dll' due to global exclusion rules.
+14201 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14201 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14201 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14202 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14202 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14202 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14202 DEBUG: Processing dependency, name: 'libffi-8.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libffi-8.dll'
+14202 DEBUG: Collecting dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libffi-8.dll' as 'libffi-8.dll'.
+14202 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_multiprocessing.pyd'
+14207 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14207 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14207 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14207 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14207 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14207 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14207 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14208 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14208 DEBUG: Processing dependency, name: 'WS2_32.dll', resolved path: 'C:\\WINDOWS\\system32\\WS2_32.dll'
+14208 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\WS2_32.dll' due to global exclusion rules.
+14208 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\pyexpat.pyd'
+14212 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14212 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14212 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14213 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14213 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14213 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14213 DEBUG: Processing dependency, name: 'api-ms-win-crt-convert-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll'
+14213 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll' due to prior processing.
+14213 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14213 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14213 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14213 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14213 DEBUG: Processing dependency, name: 'api-ms-win-crt-environment-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-environment-l1-1-0.dll'
+14214 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-environment-l1-1-0.dll' due to prior processing.
+14214 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14214 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14214 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_asyncio.pyd'
+14216 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14217 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14217 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14217 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14217 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14217 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14217 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14218 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14218 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_lzma.pyd'
+14222 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14222 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14222 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14222 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14222 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14223 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14223 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14223 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14223 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14223 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14223 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_bz2.pyd'
+14226 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14227 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14227 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14227 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14227 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14228 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14228 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14228 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14228 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14228 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14228 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14228 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14228 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_wmi.pyd'
+14234 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14234 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14234 DEBUG: Processing dependency, name: 'VCRUNTIME140_1.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll'
+14235 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll' due to prior processing.
+14235 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14235 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14235 DEBUG: Processing dependency, name: 'PROPSYS.dll', resolved path: 'C:\\WINDOWS\\system32\\PROPSYS.dll'
+14236 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\PROPSYS.dll' due to global exclusion rules.
+14236 DEBUG: Processing dependency, name: 'OLEAUT32.dll', resolved path: 'C:\\WINDOWS\\system32\\OLEAUT32.dll'
+14236 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\OLEAUT32.dll' due to global exclusion rules.
+14236 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14236 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14236 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14236 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14236 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14236 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14236 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14237 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14237 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\_curses.cp313-win_amd64.pyd'
+14243 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14243 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14243 DEBUG: Processing dependency, name: 'ADVAPI32.dll', resolved path: 'C:\\WINDOWS\\system32\\ADVAPI32.dll'
+14243 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\ADVAPI32.dll' due to global exclusion rules.
+14243 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14244 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14244 DEBUG: Processing dependency, name: 'USER32.dll', resolved path: 'C:\\WINDOWS\\system32\\USER32.dll'
+14244 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\USER32.dll' due to global exclusion rules.
+14244 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14244 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14244 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14244 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14244 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14245 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14245 DEBUG: Processing dependency, name: 'api-ms-win-crt-environment-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-environment-l1-1-0.dll'
+14245 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-environment-l1-1-0.dll' due to prior processing.
+14245 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14245 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14245 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14246 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14246 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_uuid.pyd'
+14249 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14250 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14250 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14250 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14250 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14250 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14250 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14251 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14251 DEBUG: Processing dependency, name: 'RPCRT4.dll', resolved path: 'C:\\WINDOWS\\system32\\RPCRT4.dll'
+14251 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\RPCRT4.dll' due to global exclusion rules.
+14251 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PIL\\_imagingft.cp313-win_amd64.pyd'
+14260 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14260 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14260 DEBUG: Processing dependency, name: 'api-ms-win-crt-math-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll'
+14260 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll' due to prior processing.
+14260 DEBUG: Processing dependency, name: 'api-ms-win-crt-utility-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll'
+14261 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll' due to prior processing.
+14261 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14261 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14261 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14261 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14261 DEBUG: Processing dependency, name: 'api-ms-win-crt-convert-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll'
+14261 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll' due to prior processing.
+14261 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14261 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14261 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14262 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14262 DEBUG: Processing dependency, name: 'api-ms-win-crt-environment-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-environment-l1-1-0.dll'
+14262 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-environment-l1-1-0.dll' due to prior processing.
+14262 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14262 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14262 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14262 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14263 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PIL\\_imaging.cp313-win_amd64.pyd'
+14270 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14271 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14271 DEBUG: Processing dependency, name: 'api-ms-win-crt-math-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll'
+14271 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll' due to prior processing.
+14271 DEBUG: Processing dependency, name: 'GDI32.dll', resolved path: 'C:\\WINDOWS\\system32\\GDI32.dll'
+14272 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\GDI32.dll' due to global exclusion rules.
+14272 DEBUG: Processing dependency, name: 'api-ms-win-crt-utility-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll'
+14272 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll' due to prior processing.
+14272 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14272 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14272 DEBUG: Processing dependency, name: 'USER32.dll', resolved path: 'C:\\WINDOWS\\system32\\USER32.dll'
+14272 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\USER32.dll' due to global exclusion rules.
+14272 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14273 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14273 DEBUG: Processing dependency, name: 'api-ms-win-crt-convert-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll'
+14273 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll' due to prior processing.
+14273 DEBUG: Processing dependency, name: 'api-ms-win-crt-time-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-time-l1-1-0.dll'
+14273 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-time-l1-1-0.dll' due to prior processing.
+14273 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14273 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14273 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14274 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14274 DEBUG: Processing dependency, name: 'api-ms-win-crt-environment-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-environment-l1-1-0.dll'
+14274 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-environment-l1-1-0.dll' due to prior processing.
+14274 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14274 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14274 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14274 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14274 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\_core\\_multiarray_tests.cp313-win_amd64.pyd'
+14279 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14280 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14280 DEBUG: Processing dependency, name: 'api-ms-win-crt-math-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll'
+14280 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll' due to prior processing.
+14280 DEBUG: Processing dependency, name: 'api-ms-win-crt-utility-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll'
+14281 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll' due to prior processing.
+14281 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14281 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14281 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14281 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14281 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14281 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14281 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14282 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14282 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14282 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14282 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\_core\\_multiarray_umath.cp313-win_amd64.pyd'
+14291 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14291 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14291 DEBUG: Processing dependency, name: 'api-ms-win-crt-math-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll'
+14291 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll' due to prior processing.
+14291 DEBUG: Processing dependency, name: 'api-ms-win-crt-utility-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll'
+14292 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll' due to prior processing.
+14292 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14292 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14292 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14292 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14292 DEBUG: Processing dependency, name: 'libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll'
+14293 DEBUG: Collecting dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll' as 'numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll'.
+14293 DEBUG: Processing dependency, name: 'api-ms-win-crt-convert-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll'
+14293 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll' due to prior processing.
+14293 DEBUG: Processing dependency, name: 'api-ms-win-crt-time-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-time-l1-1-0.dll'
+14293 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-time-l1-1-0.dll' due to prior processing.
+14293 DEBUG: Processing dependency, name: 'msvcp140-263139962577ecda4cd9469ca360a746.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy.libs\\msvcp140-263139962577ecda4cd9469ca360a746.dll'
+14293 DEBUG: Collecting dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy.libs\\msvcp140-263139962577ecda4cd9469ca360a746.dll' as 'numpy.libs\\msvcp140-263139962577ecda4cd9469ca360a746.dll'.
+14293 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14293 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14293 DEBUG: Processing dependency, name: 'api-ms-win-crt-locale-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-locale-l1-1-0.dll'
+14294 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-locale-l1-1-0.dll' due to prior processing.
+14294 DEBUG: Processing dependency, name: 'api-ms-win-crt-environment-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-environment-l1-1-0.dll'
+14294 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-environment-l1-1-0.dll' due to prior processing.
+14294 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14294 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14294 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14294 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14294 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14295 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14295 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\charset_normalizer\\md__mypyc.cp313-win_amd64.pyd'
+14298 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14298 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14298 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14299 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14299 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14299 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14299 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14299 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14299 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14300 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14300 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14300 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14300 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\charset_normalizer\\md.cp313-win_amd64.pyd'
+14302 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14303 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14303 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14303 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14303 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14303 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14303 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14303 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14303 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\psutil\\_psutil_windows.pyd'
+14313 DEBUG: Processing dependency, name: 'PSAPI.DLL', resolved path: 'C:\\WINDOWS\\system32\\PSAPI.DLL'
+14313 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\PSAPI.DLL' due to global exclusion rules.
+14313 DEBUG: Processing dependency, name: 'pdh.dll', resolved path: 'C:\\WINDOWS\\system32\\pdh.dll'
+14314 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\pdh.dll' due to global exclusion rules.
+14314 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14314 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14314 DEBUG: Processing dependency, name: 'python3.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python3.dll'
+14315 DEBUG: Collecting dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python3.dll' as 'python3.dll'.
+14315 DEBUG: Processing dependency, name: 'ADVAPI32.dll', resolved path: 'C:\\WINDOWS\\system32\\ADVAPI32.dll'
+14315 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\ADVAPI32.dll' due to global exclusion rules.
+14315 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14315 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14315 DEBUG: Processing dependency, name: 'POWRPROF.dll', resolved path: 'C:\\WINDOWS\\system32\\POWRPROF.dll'
+14315 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\POWRPROF.dll' due to global exclusion rules.
+14315 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14316 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14316 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14316 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14316 DEBUG: Processing dependency, name: 'api-ms-win-crt-environment-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-environment-l1-1-0.dll'
+14316 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-environment-l1-1-0.dll' due to prior processing.
+14316 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14316 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14316 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14316 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14316 DEBUG: Processing dependency, name: 'IPHLPAPI.DLL', resolved path: 'C:\\WINDOWS\\system32\\IPHLPAPI.DLL'
+14317 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\IPHLPAPI.DLL' due to global exclusion rules.
+14317 DEBUG: Processing dependency, name: 'SHELL32.dll', resolved path: 'C:\\WINDOWS\\system32\\SHELL32.dll'
+14317 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\SHELL32.dll' due to global exclusion rules.
+14317 DEBUG: Processing dependency, name: 'WS2_32.dll', resolved path: 'C:\\WINDOWS\\system32\\WS2_32.dll'
+14317 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\WS2_32.dll' due to global exclusion rules.
+14317 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\win32\\win32pdh.pyd'
+14321 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14321 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14321 DEBUG: Processing dependency, name: 'VCRUNTIME140_1.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll'
+14322 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll' due to prior processing.
+14322 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14322 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14322 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14323 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14323 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14323 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14323 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14323 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14323 DEBUG: Processing dependency, name: 'pywintypes313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pywin32_system32\\pywintypes313.dll'
+14323 DEBUG: Collecting dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pywin32_system32\\pywintypes313.dll' as 'pywin32_system32\\pywintypes313.dll'.
+14323 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14324 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14324 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\linalg\\_umath_linalg.cp313-win_amd64.pyd'
+14328 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14329 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14329 DEBUG: Processing dependency, name: 'api-ms-win-crt-math-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll'
+14329 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll' due to prior processing.
+14329 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14330 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14330 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14330 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14330 DEBUG: Processing dependency, name: 'libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll'
+14330 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll' due to prior processing.
+14330 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14330 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14330 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14331 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14331 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14331 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14331 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\mtrand.cp313-win_amd64.pyd'
+14334 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14335 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14335 DEBUG: Processing dependency, name: 'api-ms-win-crt-math-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll'
+14335 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll' due to prior processing.
+14335 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14335 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14335 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14336 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14336 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14336 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14336 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_sfc64.cp313-win_amd64.pyd'
+14339 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14340 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14340 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14340 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14340 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14340 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14340 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14340 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14341 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_philox.cp313-win_amd64.pyd'
+14343 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14344 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14344 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14344 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14344 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14344 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14344 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14345 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14345 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_pcg64.cp313-win_amd64.pyd'
+14348 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14348 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14348 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14348 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14348 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14348 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14348 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14349 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14349 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_mt19937.cp313-win_amd64.pyd'
+14352 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14352 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14352 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14353 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14353 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14353 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14353 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14353 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14353 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14353 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14353 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\bit_generator.cp313-win_amd64.pyd'
+14356 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14357 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14357 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14357 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14357 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14357 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14357 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14358 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14358 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_generator.cp313-win_amd64.pyd'
+14363 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14364 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14364 DEBUG: Processing dependency, name: 'api-ms-win-crt-math-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll'
+14364 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll' due to prior processing.
+14364 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14364 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14364 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14365 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14365 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14365 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14365 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14365 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14365 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14365 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14365 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_bounded_integers.cp313-win_amd64.pyd'
+14368 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14369 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14369 DEBUG: Processing dependency, name: 'api-ms-win-crt-math-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll'
+14369 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll' due to prior processing.
+14369 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14369 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14369 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14370 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14370 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14370 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14370 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\random\\_common.cp313-win_amd64.pyd'
+14373 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14374 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14374 DEBUG: Processing dependency, name: 'api-ms-win-crt-math-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll'
+14374 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll' due to prior processing.
+14374 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14375 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14375 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14375 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14375 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14375 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14375 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\fft\\_pocketfft_umath.cp313-win_amd64.pyd'
+14380 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14380 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14380 DEBUG: Processing dependency, name: 'VCRUNTIME140_1.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll'
+14381 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll' due to prior processing.
+14381 DEBUG: Processing dependency, name: 'api-ms-win-crt-math-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll'
+14381 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll' due to prior processing.
+14381 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14382 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14382 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14382 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14382 DEBUG: Processing dependency, name: 'msvcp140-263139962577ecda4cd9469ca360a746.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy.libs\\msvcp140-263139962577ecda4cd9469ca360a746.dll'
+14382 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy.libs\\msvcp140-263139962577ecda4cd9469ca360a746.dll' due to prior processing.
+14382 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14382 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14382 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14383 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14383 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\yaml\\_yaml.cp313-win_amd64.pyd'
+14386 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14387 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14387 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14387 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14387 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14388 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14388 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14388 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14388 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14388 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14388 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14388 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14388 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PIL\\_webp.cp313-win_amd64.pyd'
+14394 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14394 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14394 DEBUG: Processing dependency, name: 'api-ms-win-crt-math-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll'
+14395 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll' due to prior processing.
+14395 DEBUG: Processing dependency, name: 'api-ms-win-crt-utility-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll'
+14395 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll' due to prior processing.
+14395 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14395 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14395 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14396 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14396 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14396 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14396 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14396 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14396 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14396 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14396 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PIL\\_imagingtk.cp313-win_amd64.pyd'
+14402 DEBUG: Processing dependency, name: 'PSAPI.DLL', resolved path: 'C:\\WINDOWS\\system32\\PSAPI.DLL'
+14402 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\PSAPI.DLL' due to global exclusion rules.
+14402 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14402 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14403 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14403 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14403 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14403 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14403 DEBUG: Processing dependency, name: 'api-ms-win-crt-convert-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll'
+14403 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll' due to prior processing.
+14403 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14403 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14404 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14404 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14404 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14404 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14404 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14404 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14404 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PIL\\_avif.cp313-win_amd64.pyd'
+14412 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14412 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14412 DEBUG: Processing dependency, name: 'api-ms-win-crt-math-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll'
+14412 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll' due to prior processing.
+14412 DEBUG: Processing dependency, name: 'api-ms-win-crt-utility-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll'
+14413 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll' due to prior processing.
+14413 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14413 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14413 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14413 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14413 DEBUG: Processing dependency, name: 'api-ms-win-crt-convert-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll'
+14413 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll' due to prior processing.
+14414 DEBUG: Processing dependency, name: 'api-ms-win-crt-time-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-time-l1-1-0.dll'
+14414 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-time-l1-1-0.dll' due to prior processing.
+14414 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14414 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14414 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14414 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14414 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14414 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14414 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14415 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14415 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PIL\\_imagingcms.cp313-win_amd64.pyd'
+14422 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14423 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14423 DEBUG: Processing dependency, name: 'api-ms-win-crt-math-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll'
+14423 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll' due to prior processing.
+14423 DEBUG: Processing dependency, name: 'GDI32.dll', resolved path: 'C:\\WINDOWS\\system32\\GDI32.dll'
+14423 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\GDI32.dll' due to global exclusion rules.
+14423 DEBUG: Processing dependency, name: 'api-ms-win-crt-filesystem-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-filesystem-l1-1-0.dll'
+14423 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-filesystem-l1-1-0.dll' due to prior processing.
+14423 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14424 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14424 DEBUG: Processing dependency, name: 'USER32.dll', resolved path: 'C:\\WINDOWS\\system32\\USER32.dll'
+14424 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\USER32.dll' due to global exclusion rules.
+14424 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14424 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14424 DEBUG: Processing dependency, name: 'api-ms-win-crt-time-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-time-l1-1-0.dll'
+14424 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-time-l1-1-0.dll' due to prior processing.
+14424 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14424 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14424 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14425 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14425 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14425 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14425 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14425 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14425 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PIL\\_imagingmath.cp313-win_amd64.pyd'
+14428 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14428 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14428 DEBUG: Processing dependency, name: 'api-ms-win-crt-math-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll'
+14429 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll' due to prior processing.
+14429 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14429 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14429 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14429 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14430 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14430 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14430 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_elementtree.pyd'
+14433 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14434 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14434 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14434 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14434 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14434 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14434 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14435 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14435 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14435 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14435 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\_cffi_backend.cp313-win_amd64.pyd'
+14440 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14441 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14441 DEBUG: Processing dependency, name: 'api-ms-win-crt-math-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll'
+14441 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll' due to prior processing.
+14441 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14442 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14442 DEBUG: Processing dependency, name: 'USER32.dll', resolved path: 'C:\\WINDOWS\\system32\\USER32.dll'
+14442 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\USER32.dll' due to global exclusion rules.
+14442 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14442 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14442 DEBUG: Processing dependency, name: 'api-ms-win-crt-convert-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll'
+14442 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll' due to prior processing.
+14442 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14442 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14443 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14443 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14443 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14443 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14443 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14443 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14443 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd'
+14456 DEBUG: Processing dependency, name: 'api-ms-win-crt-filesystem-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-filesystem-l1-1-0.dll'
+14457 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-filesystem-l1-1-0.dll' due to prior processing.
+14457 DEBUG: Processing dependency, name: 'api-ms-win-crt-utility-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll'
+14457 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll' due to prior processing.
+14457 DEBUG: Processing dependency, name: 'USER32.dll', resolved path: 'C:\\WINDOWS\\system32\\USER32.dll'
+14457 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\USER32.dll' due to global exclusion rules.
+14457 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14458 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14458 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14458 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14458 DEBUG: Processing dependency, name: 'bcryptprimitives.dll', resolved path: 'C:\\WINDOWS\\system32\\bcryptprimitives.dll'
+14458 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\bcryptprimitives.dll' due to global exclusion rules.
+14458 DEBUG: Processing dependency, name: 'api-ms-win-crt-time-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-time-l1-1-0.dll'
+14459 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-time-l1-1-0.dll' due to prior processing.
+14459 DEBUG: Processing dependency, name: 'api-ms-win-core-synch-l1-2-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-synch-l1-2-0.dll'
+14459 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-synch-l1-2-0.dll' as 'api-ms-win-core-synch-l1-2-0.dll'.
+14459 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14460 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14460 DEBUG: Processing dependency, name: 'api-ms-win-crt-convert-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll'
+14460 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll' due to prior processing.
+14460 DEBUG: Processing dependency, name: 'ntdll.dll', resolved path: 'C:\\WINDOWS\\system32\\ntdll.dll'
+14460 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\ntdll.dll' due to global exclusion rules.
+14460 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14460 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14460 DEBUG: Processing dependency, name: 'WS2_32.dll', resolved path: 'C:\\WINDOWS\\system32\\WS2_32.dll'
+14460 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\WS2_32.dll' due to global exclusion rules.
+14461 DEBUG: Processing dependency, name: 'CRYPT32.dll', resolved path: 'C:\\WINDOWS\\system32\\CRYPT32.dll'
+14461 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\CRYPT32.dll' due to global exclusion rules.
+14461 DEBUG: Processing dependency, name: 'python3.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python3.dll'
+14461 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python3.dll' due to prior processing.
+14461 DEBUG: Processing dependency, name: 'ADVAPI32.dll', resolved path: 'C:\\WINDOWS\\system32\\ADVAPI32.dll'
+14461 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\ADVAPI32.dll' due to global exclusion rules.
+14461 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14461 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14461 DEBUG: Processing dependency, name: 'api-ms-win-crt-environment-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-environment-l1-1-0.dll'
+14461 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-environment-l1-1-0.dll' due to prior processing.
+14461 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14462 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14462 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-filesystem-l1-1-0.dll'
+14463 DEBUG: Processing dependency, name: 'ucrtbase.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll'
+14463 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll' as 'ucrtbase.dll'.
+14463 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14464 DEBUG: Processing dependency, name: 'ucrtbase.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll'
+14465 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll' due to prior processing.
+14465 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14466 DEBUG: Processing dependency, name: 'ucrtbase.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll'
+14467 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll' due to prior processing.
+14467 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll'
+14471 DEBUG: Processing dependency, name: 'ucrtbase.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll'
+14471 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll' due to prior processing.
+14471 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-time-l1-1-0.dll'
+14473 DEBUG: Processing dependency, name: 'ucrtbase.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll'
+14473 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll' due to prior processing.
+14473 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-locale-l1-1-0.dll'
+14475 DEBUG: Processing dependency, name: 'ucrtbase.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll'
+14475 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll' due to prior processing.
+14475 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-process-l1-1-0.dll'
+14476 DEBUG: Processing dependency, name: 'ucrtbase.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll'
+14476 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll' due to prior processing.
+14476 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-conio-l1-1-0.dll'
+14478 DEBUG: Processing dependency, name: 'ucrtbase.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll'
+14478 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll' due to prior processing.
+14478 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14482 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14482 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14482 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14482 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14482 DEBUG: Processing dependency, name: 'api-ms-win-crt-convert-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll'
+14483 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll' due to prior processing.
+14483 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14483 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14483 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14484 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14484 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14484 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14484 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll'
+14486 DEBUG: Processing dependency, name: 'ucrtbase.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll'
+14487 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll' due to prior processing.
+14487 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14490 DEBUG: Processing dependency, name: 'ucrtbase.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll'
+14490 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll' due to prior processing.
+14490 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-environment-l1-1-0.dll'
+14491 DEBUG: Processing dependency, name: 'ucrtbase.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll'
+14492 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll' due to prior processing.
+14492 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14495 DEBUG: Processing dependency, name: 'ucrtbase.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll'
+14495 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll' due to prior processing.
+14495 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-private-l1-1-0.dll'
+14505 DEBUG: Processing dependency, name: 'ucrtbase.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll'
+14506 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll' due to prior processing.
+14506 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll'
+14507 DEBUG: Processing dependency, name: 'ucrtbase.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll'
+14508 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll' due to prior processing.
+14508 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll'
+14511 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14511 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14511 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14512 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14512 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14512 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14512 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14512 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14512 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14513 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14513 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libcrypto-3.dll'
+14532 DEBUG: Processing dependency, name: 'bcrypt.dll', resolved path: 'C:\\WINDOWS\\system32\\bcrypt.dll'
+14533 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\bcrypt.dll' due to global exclusion rules.
+14533 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14533 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14533 DEBUG: Processing dependency, name: 'api-ms-win-crt-filesystem-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-filesystem-l1-1-0.dll'
+14533 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-filesystem-l1-1-0.dll' due to prior processing.
+14533 DEBUG: Processing dependency, name: 'api-ms-win-crt-utility-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll'
+14534 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll' due to prior processing.
+14534 DEBUG: Processing dependency, name: 'ADVAPI32.dll', resolved path: 'C:\\WINDOWS\\system32\\ADVAPI32.dll'
+14534 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\ADVAPI32.dll' due to global exclusion rules.
+14534 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14534 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14534 DEBUG: Processing dependency, name: 'USER32.dll', resolved path: 'C:\\WINDOWS\\system32\\USER32.dll'
+14534 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\USER32.dll' due to global exclusion rules.
+14534 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14534 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14534 DEBUG: Processing dependency, name: 'api-ms-win-crt-convert-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll'
+14535 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll' due to prior processing.
+14535 DEBUG: Processing dependency, name: 'api-ms-win-crt-time-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-time-l1-1-0.dll'
+14535 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-time-l1-1-0.dll' due to prior processing.
+14535 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14535 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14535 DEBUG: Processing dependency, name: 'api-ms-win-crt-environment-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-environment-l1-1-0.dll'
+14535 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-environment-l1-1-0.dll' due to prior processing.
+14535 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14535 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14535 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14536 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14536 DEBUG: Processing dependency, name: 'WS2_32.dll', resolved path: 'C:\\WINDOWS\\system32\\WS2_32.dll'
+14536 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\WS2_32.dll' due to global exclusion rules.
+14536 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libssl-3.dll'
+14542 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14542 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14542 DEBUG: Processing dependency, name: 'api-ms-win-crt-filesystem-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-filesystem-l1-1-0.dll'
+14543 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-filesystem-l1-1-0.dll' due to prior processing.
+14543 DEBUG: Processing dependency, name: 'api-ms-win-crt-utility-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll'
+14543 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll' due to prior processing.
+14543 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14543 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14543 DEBUG: Processing dependency, name: 'api-ms-win-crt-convert-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll'
+14544 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll' due to prior processing.
+14544 DEBUG: Processing dependency, name: 'api-ms-win-crt-time-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-time-l1-1-0.dll'
+14544 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-time-l1-1-0.dll' due to prior processing.
+14544 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14544 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14544 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14544 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14544 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14545 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14545 DEBUG: Processing dependency, name: 'libcrypto-3.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libcrypto-3.dll'
+14545 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libcrypto-3.dll' due to prior processing.
+14545 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libffi-8.dll'
+14547 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14548 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14548 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14548 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14548 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14548 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14548 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python3.dll'
+14557 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14557 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14557 DEBUG: Analyzing binary 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pywin32_system32\\pywintypes313.dll'
+14567 DEBUG: Processing dependency, name: 'api-ms-win-crt-runtime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll'
+14568 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll' due to prior processing.
+14568 DEBUG: Processing dependency, name: 'VCRUNTIME140_1.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll'
+14568 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll' due to prior processing.
+14568 DEBUG: Processing dependency, name: 'api-ms-win-crt-math-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll'
+14569 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll' due to prior processing.
+14569 DEBUG: Processing dependency, name: 'ADVAPI32.dll', resolved path: 'C:\\WINDOWS\\system32\\ADVAPI32.dll'
+14569 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\ADVAPI32.dll' due to global exclusion rules.
+14569 DEBUG: Processing dependency, name: 'VCRUNTIME140.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll'
+14569 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll' due to prior processing.
+14569 DEBUG: Processing dependency, name: 'USER32.dll', resolved path: 'C:\\WINDOWS\\system32\\USER32.dll'
+14569 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\USER32.dll' due to global exclusion rules.
+14569 DEBUG: Processing dependency, name: 'OLEAUT32.dll', resolved path: 'C:\\WINDOWS\\system32\\OLEAUT32.dll'
+14569 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\OLEAUT32.dll' due to global exclusion rules.
+14569 DEBUG: Processing dependency, name: 'api-ms-win-crt-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll'
+14570 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll' due to prior processing.
+14570 DEBUG: Processing dependency, name: 'api-ms-win-crt-time-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-time-l1-1-0.dll'
+14570 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-time-l1-1-0.dll' due to prior processing.
+14570 DEBUG: Processing dependency, name: 'KERNEL32.dll', resolved path: 'C:\\WINDOWS\\system32\\KERNEL32.dll'
+14570 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\KERNEL32.dll' due to global exclusion rules.
+14570 DEBUG: Processing dependency, name: 'ole32.dll', resolved path: 'C:\\WINDOWS\\system32\\ole32.dll'
+14570 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\ole32.dll' due to global exclusion rules.
+14570 DEBUG: Processing dependency, name: 'python313.dll', resolved path: 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll'
+14571 DEBUG: Skipping dependency 'C:\\Users\\marke\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll' due to prior processing.
+14571 DEBUG: Processing dependency, name: 'api-ms-win-crt-stdio-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll'
+14571 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll' due to prior processing.
+14571 DEBUG: Processing dependency, name: 'api-ms-win-crt-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll'
+14571 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll' due to prior processing.
+14571 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-synch-l1-2-0.dll'
+14572 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14573 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14573 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\ucrtbase.dll'
+14587 DEBUG: Processing dependency, name: 'api-ms-win-core-datetime-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-datetime-l1-1-0.dll'
+14587 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-datetime-l1-1-0.dll' as 'api-ms-win-core-datetime-l1-1-0.dll'.
+14587 DEBUG: Processing dependency, name: 'api-ms-win-core-fibers-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-fibers-l1-1-0.dll'
+14587 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-fibers-l1-1-0.dll' as 'api-ms-win-core-fibers-l1-1-0.dll'.
+14587 DEBUG: Processing dependency, name: 'api-ms-win-core-libraryloader-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-libraryloader-l1-1-0.dll'
+14588 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-libraryloader-l1-1-0.dll' as 'api-ms-win-core-libraryloader-l1-1-0.dll'.
+14588 DEBUG: Processing dependency, name: 'api-ms-win-core-processenvironment-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-processenvironment-l1-1-0.dll'
+14588 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-processenvironment-l1-1-0.dll' as 'api-ms-win-core-processenvironment-l1-1-0.dll'.
+14588 DEBUG: Processing dependency, name: 'api-ms-win-core-sysinfo-l1-2-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-sysinfo-l1-2-0.dll'
+14588 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-sysinfo-l1-2-0.dll' as 'api-ms-win-core-sysinfo-l1-2-0.dll'.
+14588 DEBUG: Processing dependency, name: 'api-ms-win-core-sysinfo-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-sysinfo-l1-1-0.dll'
+14588 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-sysinfo-l1-1-0.dll' as 'api-ms-win-core-sysinfo-l1-1-0.dll'.
+14588 DEBUG: Processing dependency, name: 'api-ms-win-core-interlocked-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-interlocked-l1-1-0.dll'
+14589 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-interlocked-l1-1-0.dll' as 'api-ms-win-core-interlocked-l1-1-0.dll'.
+14589 DEBUG: Processing dependency, name: 'api-ms-win-core-string-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-string-l1-1-0.dll'
+14589 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-string-l1-1-0.dll' as 'api-ms-win-core-string-l1-1-0.dll'.
+14589 DEBUG: Processing dependency, name: 'api-ms-win-core-synch-l1-2-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-synch-l1-2-0.dll'
+14589 DEBUG: Skipping dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-synch-l1-2-0.dll' due to prior processing.
+14589 DEBUG: Processing dependency, name: 'api-ms-win-core-file-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-file-l1-1-0.dll'
+14590 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-file-l1-1-0.dll' as 'api-ms-win-core-file-l1-1-0.dll'.
+14590 DEBUG: Processing dependency, name: 'api-ms-win-core-file-l1-2-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-file-l1-2-0.dll'
+14590 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-file-l1-2-0.dll' as 'api-ms-win-core-file-l1-2-0.dll'.
+14590 DEBUG: Processing dependency, name: 'api-ms-win-core-processthreads-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-processthreads-l1-1-0.dll'
+14590 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-processthreads-l1-1-0.dll' as 'api-ms-win-core-processthreads-l1-1-0.dll'.
+14590 DEBUG: Processing dependency, name: 'api-ms-win-core-util-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-util-l1-1-0.dll'
+14591 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-util-l1-1-0.dll' as 'api-ms-win-core-util-l1-1-0.dll'.
+14591 DEBUG: Processing dependency, name: 'api-ms-win-core-rtlsupport-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-rtlsupport-l1-1-0.dll'
+14591 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-rtlsupport-l1-1-0.dll' as 'api-ms-win-core-rtlsupport-l1-1-0.dll'.
+14591 DEBUG: Processing dependency, name: 'api-ms-win-core-kernel32-legacy-l1-1-1.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-kernel32-legacy-l1-1-1.dll'
+14591 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-kernel32-legacy-l1-1-1.dll' as 'api-ms-win-core-kernel32-legacy-l1-1-1.dll'.
+14591 DEBUG: Processing dependency, name: 'api-ms-win-core-processthreads-l1-1-1.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-processthreads-l1-1-1.dll'
+14591 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-processthreads-l1-1-1.dll' as 'api-ms-win-core-processthreads-l1-1-1.dll'.
+14591 DEBUG: Processing dependency, name: 'api-ms-win-core-localization-l1-2-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-localization-l1-2-0.dll'
+14592 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-localization-l1-2-0.dll' as 'api-ms-win-core-localization-l1-2-0.dll'.
+14592 DEBUG: Processing dependency, name: 'api-ms-win-core-memory-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-memory-l1-1-0.dll'
+14592 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-memory-l1-1-0.dll' as 'api-ms-win-core-memory-l1-1-0.dll'.
+14592 DEBUG: Processing dependency, name: 'api-ms-win-core-errorhandling-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-errorhandling-l1-1-0.dll'
+14592 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-errorhandling-l1-1-0.dll' as 'api-ms-win-core-errorhandling-l1-1-0.dll'.
+14593 DEBUG: Processing dependency, name: 'api-ms-win-core-timezone-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-timezone-l1-1-0.dll'
+14593 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-timezone-l1-1-0.dll' as 'api-ms-win-core-timezone-l1-1-0.dll'.
+14593 DEBUG: Processing dependency, name: 'api-ms-win-core-heap-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-heap-l1-1-0.dll'
+14593 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-heap-l1-1-0.dll' as 'api-ms-win-core-heap-l1-1-0.dll'.
+14593 DEBUG: Processing dependency, name: 'api-ms-win-core-profile-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-profile-l1-1-0.dll'
+14593 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-profile-l1-1-0.dll' as 'api-ms-win-core-profile-l1-1-0.dll'.
+14593 DEBUG: Processing dependency, name: 'api-ms-win-core-file-l2-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-file-l2-1-0.dll'
+14594 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-file-l2-1-0.dll' as 'api-ms-win-core-file-l2-1-0.dll'.
+14594 DEBUG: Processing dependency, name: 'api-ms-win-core-synch-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-synch-l1-1-0.dll'
+14594 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-synch-l1-1-0.dll' as 'api-ms-win-core-synch-l1-1-0.dll'.
+14594 DEBUG: Processing dependency, name: 'api-ms-win-core-namedpipe-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-namedpipe-l1-1-0.dll'
+14594 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-namedpipe-l1-1-0.dll' as 'api-ms-win-core-namedpipe-l1-1-0.dll'.
+14594 DEBUG: Processing dependency, name: 'api-ms-win-core-debug-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-debug-l1-1-0.dll'
+14595 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-debug-l1-1-0.dll' as 'api-ms-win-core-debug-l1-1-0.dll'.
+14595 DEBUG: Processing dependency, name: 'api-ms-win-core-fibers-l1-1-1.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-fibers-l1-1-1.dll'
+14595 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-fibers-l1-1-1.dll' as 'api-ms-win-core-fibers-l1-1-1.dll'.
+14595 DEBUG: Processing dependency, name: 'api-ms-win-core-handle-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-handle-l1-1-0.dll'
+14595 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-handle-l1-1-0.dll' as 'api-ms-win-core-handle-l1-1-0.dll'.
+14595 DEBUG: Processing dependency, name: 'api-ms-win-core-console-l1-1-0.dll', resolved path: 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-console-l1-1-0.dll'
+14595 DEBUG: Collecting dependency 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-console-l1-1-0.dll' as 'api-ms-win-core-console-l1-1-0.dll'.
+14596 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-datetime-l1-1-0.dll'
+14597 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14597 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14597 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-fibers-l1-1-0.dll'
+14598 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14598 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14598 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-libraryloader-l1-1-0.dll'
+14600 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14600 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14600 DEBUG: Processing dependency, name: 'user32.dll', resolved path: 'C:\\WINDOWS\\system32\\user32.dll'
+14600 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\user32.dll' due to global exclusion rules.
+14600 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-processenvironment-l1-1-0.dll'
+14602 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14602 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14602 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-sysinfo-l1-2-0.dll'
+14604 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14604 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14604 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-sysinfo-l1-1-0.dll'
+14605 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14605 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14605 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-interlocked-l1-1-0.dll'
+14607 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14607 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14607 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-string-l1-1-0.dll'
+14608 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14608 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14608 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-file-l1-1-0.dll'
+14611 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14611 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14611 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-file-l1-2-0.dll'
+14612 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14612 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14612 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-processthreads-l1-1-0.dll'
+14614 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14614 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14614 DEBUG: Processing dependency, name: 'advapi32.dll', resolved path: 'C:\\WINDOWS\\system32\\advapi32.dll'
+14614 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\advapi32.dll' due to global exclusion rules.
+14614 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-util-l1-1-0.dll'
+14616 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14616 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14616 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-rtlsupport-l1-1-0.dll'
+14618 DEBUG: Processing dependency, name: 'ntdll.dll', resolved path: 'C:\\WINDOWS\\system32\\ntdll.dll'
+14618 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\ntdll.dll' due to global exclusion rules.
+14618 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-kernel32-legacy-l1-1-1.dll'
+14619 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14619 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14619 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-processthreads-l1-1-1.dll'
+14621 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14621 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14621 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-localization-l1-2-0.dll'
+14624 DEBUG: Processing dependency, name: 'normaliz.dll', resolved path: 'C:\\WINDOWS\\system32\\normaliz.dll'
+14624 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\normaliz.dll' due to global exclusion rules.
+14624 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14624 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14624 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-memory-l1-1-0.dll'
+14626 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14626 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14626 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-errorhandling-l1-1-0.dll'
+14628 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14628 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14628 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-timezone-l1-1-0.dll'
+14630 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14630 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14630 DEBUG: Processing dependency, name: 'advapi32.dll', resolved path: 'C:\\WINDOWS\\system32\\advapi32.dll'
+14630 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\advapi32.dll' due to global exclusion rules.
+14630 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-heap-l1-1-0.dll'
+14631 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14631 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14632 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-profile-l1-1-0.dll'
+14634 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14634 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14634 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-file-l2-1-0.dll'
+14635 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14635 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14636 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-synch-l1-1-0.dll'
+14637 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14637 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14637 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-namedpipe-l1-1-0.dll'
+14640 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14640 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14640 DEBUG: Processing dependency, name: 'advapi32.dll', resolved path: 'C:\\WINDOWS\\system32\\advapi32.dll'
+14640 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\advapi32.dll' due to global exclusion rules.
+14640 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-debug-l1-1-0.dll'
+14641 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14641 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14642 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-fibers-l1-1-1.dll'
+14643 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14643 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14643 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-handle-l1-1-0.dll'
+14644 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14644 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14644 DEBUG: Analyzing binary 'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\api-ms-win-core-console-l1-1-0.dll'
+14645 DEBUG: Processing dependency, name: 'kernel32.dll', resolved path: 'C:\\WINDOWS\\system32\\kernel32.dll'
+14645 DEBUG: Skipping dependency 'C:\\WINDOWS\\system32\\kernel32.dll' due to global exclusion rules.
+14658 INFO: Warnings written to C:\Dev\DescendantDownloader\build\main\warn-main.txt
+14715 INFO: Graph cross-reference written to C:\Dev\DescendantDownloader\build\main\xref-main.html
+14743 INFO: Graph drawing written to C:\Dev\DescendantDownloader\build\main\graph-main.dot
+14772 INFO: checking PYZ
+14772 INFO: Building PYZ because PYZ-00.toc is non existent
+14772 INFO: Building PYZ (ZlibArchive) C:\Dev\DescendantDownloader\build\main\PYZ-00.pyz
+15446 INFO: Building PYZ (ZlibArchive) C:\Dev\DescendantDownloader\build\main\PYZ-00.pyz completed successfully.
+15465 INFO: checking PKG
+15465 INFO: Building PKG because PKG-00.toc is non existent
+15465 INFO: Building PKG (CArchive) main.pkg
+15489 DEBUG: Compiling python script/module file C:\Users\marke\AppData\Local\Programs\Python\Python313\Lib\site-packages\PyInstaller\loader\pyiboot01_bootstrap.py
+15489 DEBUG: Compiling python script/module file C:\Users\marke\AppData\Local\Programs\Python\Python313\Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_inspect.py
+15490 DEBUG: Compiling python script/module file C:\Users\marke\AppData\Local\Programs\Python\Python313\Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_pkgutil.py
+15491 DEBUG: Compiling python script/module file C:\Users\marke\AppData\Local\Programs\Python\Python313\Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_multiprocessing.py
+15491 DEBUG: Compiling python script/module file C:\Users\marke\AppData\Local\Programs\Python\Python313\Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_setuptools.py
+15491 DEBUG: Compiling python script/module file C:\Users\marke\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pyinstaller_hooks_contrib\rthooks\pyi_rth_cryptography_openssl.py
+15492 DEBUG: Compiling python script/module file C:\Dev\DescendantDownloader\main.py
+21091 INFO: Building PKG (CArchive) main.pkg completed successfully.
+21094 INFO: Bootloader C:\Users\marke\AppData\Local\Programs\Python\Python313\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\run.exe
+21094 INFO: checking EXE
+21094 INFO: Building EXE because EXE-00.toc is non existent
+21094 INFO: Building EXE from EXE-00.toc
+21094 INFO: Copying bootloader EXE to C:\Dev\DescendantDownloader\dist\main.exe
+21129 INFO: Copying icon to EXE
+21130 DEBUG: Copying icons from ['C:\\Dev\\DescendantDownloader\\favicon.ico']
+21163 DEBUG: Writing RT_GROUP_ICON 1 resource with 20 bytes
+21163 DEBUG: Writing RT_ICON 1 resource with 270376 bytes
+21165 INFO: Copying 0 resources to EXE
+21165 INFO: Embedding manifest in EXE
+21203 INFO: Appending PKG archive to EXE
+21343 INFO: Fixing EXE headers
+21666 INFO: Building EXE from EXE-00.toc completed successfully.
+21669 INFO: Build complete! The results are available in: C:\Dev\DescendantDownloader\dist
+
+C:\Dev\DescendantDownloader>                                            
