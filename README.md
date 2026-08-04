@@ -1,5 +1,5 @@
 # Descendant Atlas
-<sub>v1.3</sub>
+<sub>v1.5</sub>
 
 ![IMAGE](docs/screenshot.png)
 
@@ -15,14 +15,13 @@ While experienced users may already be familiar with GitHub releases, archive ex
 
 Its goal is to provide a straightforward way to download official Descendant+ releases, create portable mods and apply them safely without manually navigating world folders.
 
-## What's new in v1.3
+## What's new in v1.5
 
-Improved mod handling.
+Improved diagnostics and developer tools.
 
-- You can now import multiple mods at once.
-- All imported mods are applied together the next time the world is loaded.
-- Added a `Press ENTER to continue...` prompt for `.exe` users.
-- Added two example mods: `bosstitle.dscmod` and `Dark-Market.dscmod`.
+- Added improved environment detection.
+- Added detailed debug output for Atlas operations.
+- Improved error reporting to make issues easier to identify.
 
 > [!WARNING]
 > Installing another mod before opening the world can corrupt your installation.

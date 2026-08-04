@@ -47,3 +47,12 @@ Improved mod importing workflow.
 - All imported mods are now applied together the next time the world is loaded.
 - Added two example mods: `bosstitle.dscmod` and `Dark-Market.dscmod`.
 - Added a `Press ENTER to continue...` prompt for executable users.
+
+# v1.5
+
+Improved diagnostics and developer tools.
+
+### Features
+- Added improved environment detection.
+- Added detailed debug output for Atlas operations.
+- Improved error reporting to make issues easier to identify.

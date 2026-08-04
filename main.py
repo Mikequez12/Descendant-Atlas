@@ -16,7 +16,7 @@ from tui import choose, choose_select, custom_input
 from utils import ansi_supported
 
 
-ATLAS_VERSION = 'v1.4'
+ATLAS_VERSION = 'v1.5'
 
 
 if not ansi_supported:
@@ -356,7 +356,7 @@ def main():
                         for datapack in dataps:
                             if os.path.isfile(f'mods/.temp/{MOD_PATHF}/datapacks/{datapack}'):continue
                             print(f'    Importing datapack "{datapack}"... ',end='')
-                            TOTAL_CHANGES['datapacks'].append(f'{MOD_PATHF}/{structure}')
+                            TOTAL_CHANGES['datapacks'].append(f'{MOD_PATHF}/{datapack}')
                             try:
                                 shutil.move(f'mods/.temp/{MOD_PATHF}/datapacks/{datapack}',f'downloads/{DIR_NAME}/datapacks/{datapack}')
                             except FileExistsError:
@@ -412,7 +412,7 @@ def main():
                             TOTAL_CHANGES_JSON.append('{text:"  - '+_v+'\\n",color:white}')
                     with open(f'downloads/{DIR_NAME}/datapacks/descendant-atlas/data/descendant-atlas/function/update.mcfunction','w',encoding='utf-8') as file:
                         file.write(('''
-execute unless data storage descendant-atlas:version applied.{{UUID}} run tellraw @a [{text:"[Descendant-Atlas]",color:aqua}," ",{color:white,text:"New patch applied.\\n"},{color:gray,text:"-------------------------------\\n"},{color:white,text:"Version ID: "},{text:"'''+CODE+'''",color:green},{color:gray,text:"\\n-------------------------------\\n"},'''+','.join(TOTAL_CHANGES_JSON)+
+execute unless data storage descendant-atlas:version applied.{{UUID}} run tellraw @a [{text:"[Descendant-Atlas]",color:aqua}," ",{color:white,text:"New patch applied.\\n"},{text:"github.com/Mikequez12/Descendant-Atlas\\n",color:gray},{color:gray,text:"───────────────────────────\\n"},{color:white,text:"Version ID: "},{text:"'''+CODE+'''",color:green},{color:gray,text:"\\n───────────────────────────\\n"},{text:"List of changes\\n",color:dark_purple},'''+','.join(TOTAL_CHANGES_JSON)+
 f''']
 '''+'\n'.join([
     'execute unless data storage descendant-atlas:version applied.{{UUID}} run place template descendant-atlas:'+f'{".".join(_.get("structure").split(".")[:-1])} {" ".join(map(str,_.get("pos")))}' for placing_ in placing for _ in placing_
