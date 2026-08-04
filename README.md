@@ -107,7 +107,7 @@ python3 main.py
 ## FAQ
 
 **Q: Does Atlas cause issues with Descendant+?**  
-**A:** No issues caused by Atlas itself are currently known. However, third-party mods or newly released versions of Descendant+ may introduce incompatibilities. If you find a bug that appears to be caused by Atlas, please report it.
+**A:** No issues caused by Atlas itself are currently known. However, third-party mods or newly released versions of Descendant+ may introduce incompatibilities. If you find a bug that appears to be caused by Atlas, please report it by opening an issue on GitHub.
 
 ---
 
