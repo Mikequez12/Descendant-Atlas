@@ -17,14 +17,16 @@ Its goal is to provide a straightforward way to download official Descendant+ re
 
 ## What's new in v1.3
 
-Improved `descendant-atlas` datapack.
+Improved mod handling.
 
-- Fixed an issue that could cause patches to be applied multiple times.
-- Mods are now initialized only once after installation.
-- Replaced entity-based persistent state tracking with storage-based tracking for improved reliability.
+- You can now import multiple mods at once.
+- All imported mods are applied together the next time the world is loaded.
+- Added a `Press ENTER to continue...` prompt for `.exe` users.
+- Added two example mods: `bosstitle.dscmod` and `Dark-Market.dscmod`.
 
-> [!NOTE]
-> Previous versions would reapply a patch when loading a world. While this usually didn't affect Descendant+ itself, some third-party mods that relied on block NBT or redstone contraptions could be reset or behave unexpectedly. Atlas now uses a more reliable storage-based system, preventing duplicate patch application and improving version detection.
+> [!WARNING]
+> Installing another mod before opening the world can corrupt your installation.
+> After every mod installation, launch the world once to let Atlas finish applying the changes before importing another mod.
 
 ## About
 
@@ -38,7 +40,8 @@ One of Atlas' core design principles is to preserve the original release wheneve
 
 - Download official Descendant+ releases directly from GitHub.
 - Create portable `.dscmod` mod packages.
-- Import mods into existing Descendant+ worlds.
+- Import many mods at the same time.
+- Apply mods into existing Descendant+ worlds.
 - Merge resource packs into the world's `resources.zip`.
 - Import structures automatically.
 - Apply structure placement automatically on first world load.
@@ -150,6 +153,11 @@ python3 main.py
 **Q: Why doesn't Atlas include modified Descendant+ releases?**  
 **A:** Atlas intentionally distributes the official Descendant+ releases without altering their contents. Any changes introduced by Atlas are limited to the infrastructure required to load Atlas mods, helping keep releases as close as possible to the originals.
 
+---
+
+**Q: Why do I need to open the descendant world folder after modding it?**
+**A:** Atlas doesn't directly modify your world when using the app, it just drops the resources. This is made for various reasons, but most importantly easy to debug and way more safe. If you don't open the world and just add another instalation, chances are the entire world gets erased, this is caused because when executing Atlas, it thinks it was installed, and gets glitched. This has not been 100% tested and your world can continue as normal after this happening. This practice is not recommended: please, run the Descendant+ release after modding it.
+
 ## Project structure
 
 ```
@@ -162,3 +170,6 @@ mods/
 ## Before you start
 > [!CAUTION]
 > This project is still experimental. Please make a backup before importing any files. Better safe than sorry.
+
+> [!CAUTION]
+> Making to modpack instalation without loading the world in between will cause issues: After every instalation you need to run the world to finish the installing process.

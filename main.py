@@ -89,6 +89,7 @@ def download(release,root_path=lambda name:f'downloads/Descendant-{name}',alert=
         if ask_overwrite:
             if choose(['Yes','No'],title=f'The release {release["name"]} is already downloaded, do you want to overwrite it?') == 'No':
                 print('Aborting...')
+                input(f'{Effect.DIM}Press ENTER to exit...{Effect.OFF}')
                 exit(0)
         os.chmod(root_path, stat.S_IWRITE)
         shutil.rmtree(root_path, ignore_errors=True)
@@ -183,9 +184,10 @@ def main():
             release = request_release()
 
             download(release)
+            input(f'{Effect.DIM}Press Enter to leave...{Effect.OFF}')
         case 'Mods':
             match choose([
-                'Import mod',
+                'Import mods',
                 'Export mod',
             ], title='Please, select an option'):
                 case 'Export mod':
@@ -195,6 +197,7 @@ def main():
 
                     if dir_name is None:
                         print('No releases are installed. Please install at least one to continue.')
+                        input(f'{Effect.DIM}Press ENTER to exit...{Effect.OFF}')
                         exit(0)
                     
                     MOD_NAME = custom_input(title='Select a name for the mod',accept=lambda _:_.strip() != '',error_msg='Invalid path')
@@ -204,6 +207,7 @@ def main():
                             'Overwrite'
                         ],title='The mod already exists. Do you want to overwrite it?') == 'Abort':
                             print('Aborting...')
+                            input(f'{Effect.DIM}Press ENTER to exit...{Effect.OFF}')
                             exit(0)
                         if os.path.exists(f'mods/{MOD_NAME}'):shutil.rmtree(f'mods/{MOD_NAME}')
                         if os.path.exists(f'mods/{MOD_NAME}.dscmod'):os.remove(f'mods/{MOD_NAME}.dscmod')
@@ -217,7 +221,7 @@ def main():
                         if v:
                             shutil.copytree(f'downloads/{dir_name}/datapacks/{k}',f'mods/{MOD_NAME}/datapacks/{k}')
                     for k,v in choose_select({
-                        _:['No','Yes'] for _ in os.listdir(f'mods/.resourcepacks')
+                        _:['No','Yes'] for _ in os.listdir(f'mods/.resourcepacks') if not _.endswith('.gitkeep')
                     }, title='Which resource packs do you want to export?', return_index=True).items():
                         if v:
                             src = f'mods/.resourcepacks/{k}'
@@ -278,25 +282,30 @@ def main():
                     os.rename(f'mods/{MOD_NAME}.zip',f'mods/{MOD_NAME}.dscmod')
 
                     print(f'The mod was created successfully. Check {Color.GREEN}"mods/{MOD_NAME}.dscmod"{Effect.OFF}')
-                case 'Import mod':
+                case 'Import mods':
+                    TOTAL_CHANGES = {}
                     DIR_NAME = choose([
                         _ for _ in os.listdir('downloads') if os.path.isdir(f'downloads/{_}') and _ != '.temp'
                     ], title='Please, select a release')
                     if DIR_NAME is None:
                         print('No releases are installed. Please install at least one to continue.')
+                        input(f'{Effect.DIM}Press ENTER to exit...{Effect.OFF}')
                         exit(0)
-                    MOD_PATH = choose([
-                        mod for mod in os.listdir('mods') if pathlib.Path(f'mods/{mod}').suffix == '.dscmod'
-                    ],title='Please, select a mod')
-                    if MOD_PATH is None:
+                    selected_mods = choose_select({
+                        mod:['No','Yes'] for mod in os.listdir('mods') if pathlib.Path(f'mods/{mod}').suffix == '.dscmod'
+                    },title='Please, select the mods you want to import',return_index=True)
+                    if selected_mods is None:
                         print('No mods are installed. Please, install at least one to continue.')
+                        input(f'{Effect.DIM}Press ENTER to exit...{Effect.OFF}')
                         exit(0)
-                    MOD_PATHF = '.'.join(MOD_PATH.split('.')[:-1])
+                    MODS = [MOD_PATH for MOD_PATH,v_ in selected_mods.items() if v_]
+                    MOD_PATHFS = ['.'.join(MOD_PATH.split('.')[:-1]) for MOD_PATH in MODS]
                     if choose([
                         'Abort',
                         'Continue'
                     ],title='Are you sure you want to continue? These changes cannot be undone') == 'Abort':
                         print('Aborting...')
+                        input(f'{Effect.DIM}Press ENTER to exit...{Effect.OFF}')
                         exit(0)
                     def try_create_folder(dir):
                         if not os.path.exists(dir):os.mkdir(dir)
@@ -319,75 +328,94 @@ def main():
                         }
                     },file)
                     with open(f'downloads/{DIR_NAME}/datapacks/descendant-atlas/data/minecraft/tags/function/load.json','w',encoding='utf-8') as file:
-                        json.dump({"values":["descendant-atlas:update","descendant-atlas:load"]},file)
+                        json.dump({"values":["descendant-atlas:update_default","descendant-atlas:load"]},file)
                     
                     print('Importing mods:')
-                    with zipfile.ZipFile(f'mods/{MOD_PATH}', 'r') as zip_ref:
-                        zip_ref.extractall(f'mods/.temp')
-                    try:structs = os.listdir(f'mods/.temp/{MOD_PATHF}/structures')
-                    except:structs = []
-                    for structure in structs:
-                        if os.path.isdir(f'mods/.temp/{MOD_PATHF}/structures/{structure}'):continue
-                        print(f'    Importing structure "{structure}"... ',end='')
-                        path = f'mods/.temp/{MOD_PATHF}/structures/{structure}'
-                        try:
-                            os.rename(path,f'downloads/{DIR_NAME}/datapacks/descendant-atlas/data/descendant-atlas/structure/{structure}')
-                        except FileExistsError:
-                            print('[ERROR] File already exists')
-                        else:
-                            print('[DONE]')
-                    try:dataps = os.listdir(f'mods/.temp/{MOD_PATHF}/datapacks')
-                    except:dataps = []
-                    for datapack in dataps:
-                        if os.path.isfile(f'mods/.temp/{MOD_PATHF}/datapacks/{datapack}'):continue
-                        print(f'    Importing datapack "{datapack}"... ',end='')
-                        try:
-                            shutil.move(f'mods/.temp/{MOD_PATHF}/datapacks/{datapack}',f'downloads/{DIR_NAME}/datapacks/{datapack}')
-                        except FileExistsError:
-                            print('[ERROR] File already exists')
-                        else:
-                            print('[DONE]')
+                    TOTAL_CHANGES['structures'] = []
+                    TOTAL_CHANGES['datapacks'] = []
+                    for I,MOD_PATH in enumerate(MODS):
+                        MOD_PATHF = MOD_PATHFS[I]
+                        with zipfile.ZipFile(f'mods/{MOD_PATH}', 'r') as zip_ref:
+                            zip_ref.extractall(f'mods/.temp')
+                        try:structs = os.listdir(f'mods/.temp/{MOD_PATHF}/structures')
+                        except:structs = []
+                        for structure in structs:
+                            if os.path.isdir(f'mods/.temp/{MOD_PATHF}/structures/{structure}'):continue
+                            print(f'    Importing structure "{structure}"... ',end='')
+                            TOTAL_CHANGES['structures'].append(f'{MOD_PATHF}/{structure}')
+                            path = f'mods/.temp/{MOD_PATHF}/structures/{structure}'
+                            try:
+                                os.rename(path,f'downloads/{DIR_NAME}/datapacks/descendant-atlas/data/descendant-atlas/structure/{structure}')
+                            except FileExistsError:
+                                print('[ERROR] File already exists')
+                            else:
+                                print('[DONE]')
+                        
+                        try:dataps = os.listdir(f'mods/.temp/{MOD_PATHF}/datapacks')
+                        except:dataps = []
+                        for datapack in dataps:
+                            if os.path.isfile(f'mods/.temp/{MOD_PATHF}/datapacks/{datapack}'):continue
+                            print(f'    Importing datapack "{datapack}"... ',end='')
+                            TOTAL_CHANGES['datapacks'].append(f'{MOD_PATHF}/{structure}')
+                            try:
+                                shutil.move(f'mods/.temp/{MOD_PATHF}/datapacks/{datapack}',f'downloads/{DIR_NAME}/datapacks/{datapack}')
+                            except FileExistsError:
+                                print('[ERROR] File already exists')
+                            else:
+                                print('[DONE]')
                     
-
-                    try:
-                        resources_zip = zipfile.ZipFile(f"downloads/{DIR_NAME}/resources.zip", "a", compression=zipfile.ZIP_DEFLATED)
-                        ress = os.listdir(f"mods/.temp/{MOD_PATHF}/resourcepacks")
-                    except:
-                        ress = []
-                        resources_zip = None
-
-                    for resourcepack in ress:
-                        pack_path = pathlib.Path(f"mods/.temp/{MOD_PATHF}/resourcepacks/{resourcepack}")
-
-                        if not pack_path.is_dir():
-                            continue
-
-                        print(f'    Importing resourcepack "{resourcepack}"... ', end="")
-
+                    TOTAL_CHANGES['resourcepacks'] = []
+                    for I,MOD_PATH in enumerate(MODS):
+                        MOD_PATHF = MOD_PATHFS[I]
                         try:
-                            for file in pack_path.rglob("*"):
-                                if file.is_file():
-                                    arcname = file.relative_to(pack_path)  # elimina la carpeta raíz
-                                    resources_zip.write(file, arcname)
+                            resources_zip = zipfile.ZipFile(f"downloads/{DIR_NAME}/resources.zip", "a", compression=zipfile.ZIP_DEFLATED)
+                            ress = os.listdir(f"mods/.temp/{MOD_PATHF}/resourcepacks")
+                        except:
+                            ress = []
+                            resources_zip = None
 
-                        except Exception as e:
-                            print(f"[ERROR] {e}")
-                        else:
-                            print("[DONE]")
+                        for resourcepack in ress:
+                            pack_path = pathlib.Path(f"mods/.temp/{MOD_PATHF}/resourcepacks/{resourcepack}")
 
-                    if resources_zip is not None:
-                        resources_zip.close()
+                            if not pack_path.is_dir():
+                                continue
+
+                            print(f'    Importing resourcepack "{resourcepack}"... ', end="")
+                            TOTAL_CHANGES['resourcepacks'].append(f'{MOD_PATH}/{resourcepack}')
+
+                            try:
+                                for file in pack_path.rglob("*"):
+                                    if file.is_file():
+                                        arcname = file.relative_to(pack_path)  # elimina la carpeta raíz
+                                        resources_zip.write(file, arcname)
+
+                            except Exception as e:
+                                print(f"[ERROR] {e}")
+                            else:
+                                print("[DONE]")
+
+                        if resources_zip is not None:
+                            resources_zip.close()
 
 
-                    with open(f'mods/.temp/{MOD_PATHF}/placing.json','r',encoding='utf-8') as file:
-                        placing = json.load(file)
+                    placing = []
+                    for MOD_PATHF in MOD_PATHFS:
+                        with open(f'mods/.temp/{MOD_PATHF}/placing.json','r',encoding='utf-8') as file:
+                            placing.append(json.load(file))
                     CODE = str(uuid.uuid4().hex)
+                    with open(f'downloads/{DIR_NAME}/datapacks/descendant-atlas/data/descendant-atlas/function/update_default.mcfunction','w',encoding='utf-8') as file:
+                        file.write('schedule function descendant-atlas:update 1s append')
+                    TOTAL_CHANGES_JSON = []
+                    for k,v in TOTAL_CHANGES.items():
+                        TOTAL_CHANGES_JSON.append('{text:"'+k+'\\n",color:blue}')
+                        for _v in v:
+                            TOTAL_CHANGES_JSON.append('{text:"  - '+_v+'\\n",color:white}')
                     with open(f'downloads/{DIR_NAME}/datapacks/descendant-atlas/data/descendant-atlas/function/update.mcfunction','w',encoding='utf-8') as file:
-                        file.write(('''                                  
-execute unless data storage descendant-atlas:version applied.{{UUID}} run summon minecraft:armor_stand 0 0 0 {Invisible:1b,Marker:1b,Small:1b,Tags:[descendant-atlas]}
-execute unless data storage descendant-atlas:version applied.{{UUID}} run tellraw @a [{text:"[Descendant-Atlas]",color:aqua}," ",{color:white,text:"New patch applied.\\n"},{color:gray,text:"-------------------------------\\n"},{color:white,text:"Version ID: "},{text:"'''+CODE+'''",color:green}]
+                        file.write(('''
+execute unless data storage descendant-atlas:version applied.{{UUID}} run tellraw @a [{text:"[Descendant-Atlas]",color:aqua}," ",{color:white,text:"New patch applied.\\n"},{color:gray,text:"-------------------------------\\n"},{color:white,text:"Version ID: "},{text:"'''+CODE+'''",color:green},{color:gray,text:"\\n-------------------------------\\n"},'''+','.join(TOTAL_CHANGES_JSON)+
+f''']
 '''+'\n'.join([
-    'execute unless data storage descendant-atlas:version applied.{{UUID}} run place template descendant-atlas:'+f'{".".join(_.get("structure").split(".")[:-1])} {" ".join(map(str,_.get("pos")))}' for _ in placing
+    'execute unless data storage descendant-atlas:version applied.{{UUID}} run place template descendant-atlas:'+f'{".".join(_.get("structure").split(".")[:-1])} {" ".join(map(str,_.get("pos")))}' for placing_ in placing for _ in placing_
 ])+'''
 execute unless data storage descendant-atlas:version applied.{{UUID}} run data modify storage descendant-atlas:version applied set value {{{UUID}}:1b}
 ''').replace('{{UUID}}',CODE))
@@ -407,9 +435,11 @@ execute unless data storage descendant-atlas:version applied.{{UUID}} run data m
 
                     shutil.rmtree(f'mods/.temp/'+MOD_PATHF)
 
-                    os.rename(f'downloads/{DIR_NAME}',f'downloads/{DIR_NAME} (modded)')
+                    if not DIR_NAME.endswith('(modded)'):os.rename(f'downloads/{DIR_NAME}',f'downloads/{DIR_NAME} (modded)')
                     
                     print(f'The mod was applied successfully.')
+                    print(f'{Color.YELLOW}WARNING: {Color.WHITE}The instalation isn\'t done yet! If you add another mod without finishing the instalation, your world may get corrupted. To finish de instalation just open the world in minecraft and check that the chat registers the changes.')
+                    input(f'{Effect.DIM}Press Enter to leave...{Effect.OFF}')
         case 'Help':
             match choose([
                 'What is Atlas?',
@@ -442,7 +472,7 @@ execute unless data storage descendant-atlas:version applied.{{UUID}} run data m
 ╰─╴''')
                 case 'Applying a mod':
                     print(f'''╭─╴\n│ {Effect.BOLD+Color.GREEN}Applying a mod{Effect.OFF}
-│ 1. Open Mods → Import mod.
+│ 1. Open Mods → Import mods.
 │ 2. Select a Descendant+ release.
 │ 3. Select a .dscmod.
 │ 4. Atlas will import and configure it automatically.

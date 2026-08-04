@@ -37,3 +37,13 @@ Improved `descendant-atlas` datapack.
 - Fixed an issue that could cause patches to be applied multiple times.
 - Mods are now initialized only once after installation.
 - Replaced entity-based persistent state tracking with storage-based tracking for improved reliability.
+
+# v1.4
+
+Improved mod importing workflow.
+
+### Features
+- Added support for importing multiple `.dscmod` packages in a single operation.
+- All imported mods are now applied together the next time the world is loaded.
+- Added two example mods: `bosstitle.dscmod` and `Dark-Market.dscmod`.
+- Added a `Press ENTER to continue...` prompt for executable users.
