@@ -28,3 +28,12 @@ Improved usability and project documentation.
 - Improved the installation guide and project documentation.
 - Added an About page inside Atlas.
 - Improved first-time user experience.
+
+# v1.3
+
+Improved `descendant-atlas` datapack.
+
+### Features
+- Fixed an issue that could cause patches to be applied multiple times.
+- Mods are now initialized only once after installation.
+- Replaced entity-based persistent state tracking with storage-based tracking for improved reliability.

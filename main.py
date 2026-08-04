@@ -16,7 +16,7 @@ from tui import choose, choose_select, custom_input
 from utils import ansi_supported
 
 
-ATLAS_VERSION = 'v1.2'
+ATLAS_VERSION = 'v1.3'
 
 
 if not ansi_supported:
@@ -288,6 +288,9 @@ def main():
                     MOD_PATH = choose([
                         mod for mod in os.listdir('mods') if pathlib.Path(f'mods/{mod}').suffix == '.dscmod'
                     ],title='Please, select a mod')
+                    if MOD_PATH is None:
+                        print('No mods are installed. Please, install at least one to continue.')
+                        exit(0)
                     MOD_PATHF = '.'.join(MOD_PATH.split('.')[:-1])
                     if choose([
                         'Abort',
@@ -380,14 +383,14 @@ def main():
                         placing = json.load(file)
                     CODE = str(uuid.uuid4().hex)
                     with open(f'downloads/{DIR_NAME}/datapacks/descendant-atlas/data/descendant-atlas/function/update.mcfunction','w',encoding='utf-8') as file:
-                        file.write('''
-execute unless entity @e[type=minecraft:armor_stand,tag=descendant-atlas] run summon minecraft:armor_stand 0 0 0 {Invisible:1b,Marker:1b,Small:1b,Tags:[descendant-atlas]}
-execute unless entity @e[type=minecraft:armor_stand,tag=descendant-atlas,tag='''+CODE+'''] run tellraw @a [{text:"[Descendant-Atlas]",color:aqua}," ",{color:white,text:"New patch applied.\\n"},{color:gray,text:"-------------------------------\\n"},{color:white,text:"Version ID: "},{text:"'''+CODE+'''",color:green}]
+                        file.write(('''                                  
+execute unless data storage descendant-atlas:version applied.{{UUID}} run summon minecraft:armor_stand 0 0 0 {Invisible:1b,Marker:1b,Small:1b,Tags:[descendant-atlas]}
+execute unless data storage descendant-atlas:version applied.{{UUID}} run tellraw @a [{text:"[Descendant-Atlas]",color:aqua}," ",{color:white,text:"New patch applied.\\n"},{color:gray,text:"-------------------------------\\n"},{color:white,text:"Version ID: "},{text:"'''+CODE+'''",color:green}]
 '''+'\n'.join([
-    f'execute unless entity @e[type=minecraft:armor_stand,tag=descendant-atlas,tag={CODE}] run place template descendant-atlas:{".".join(_.get("structure").split(".")[:-1])} {" ".join(map(str,_.get("pos")))}' for _ in placing
+    'execute unless data storage descendant-atlas:version applied.{{UUID}} run place template descendant-atlas:'+f'{".".join(_.get("structure").split(".")[:-1])} {" ".join(map(str,_.get("pos")))}' for _ in placing
 ])+'''
-execute unless entity @e[type=minecraft:armor_stand,tag=descendant-atlas,tag='''+CODE+'''] as @e[type=minecraft:armor_stand,tag=descendant-atlas] run data merge entity @s {Tags:["descendant-atlas","'''+CODE+'''"]}
-''')
+execute unless data storage descendant-atlas:version applied.{{UUID}} run data modify storage descendant-atlas:version applied set value {{{UUID}}:1b}
+''').replace('{{UUID}}',CODE))
                     with open(f'downloads/{DIR_NAME}/datapacks/descendant-atlas/data/descendant-atlas/function/load.mcfunction','w',encoding='utf-8') as file:file.write('# Couldn\'t generate load.mcfunction')
                         
                     print('Applying patches...',end='')

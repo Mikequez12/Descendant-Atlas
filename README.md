@@ -1,5 +1,5 @@
 # Descendant Atlas
-<sub>v1.2</sub>
+<sub>v1.3</sub>
 
 ![IMAGE](docs/screenshot.png)
 
@@ -14,6 +14,17 @@ Descendant Atlas was created to make installing and modifying Descendant+ simple
 While experienced users may already be familiar with GitHub releases, archive extraction and Minecraft's world structure, many players are not. Atlas automates those repetitive tasks so users can focus on playing and creating content instead of managing files.
 
 Its goal is to provide a straightforward way to download official Descendant+ releases, create portable mods and apply them safely without manually navigating world folders.
+
+## What's new in v1.3
+
+Improved `descendant-atlas` datapack.
+
+- Fixed an issue that could cause patches to be applied multiple times.
+- Mods are now initialized only once after installation.
+- Replaced entity-based persistent state tracking with storage-based tracking for improved reliability.
+
+> [!NOTE]
+> Previous versions would reapply a patch when loading a world. While this usually didn't affect Descendant+ itself, some third-party mods that relied on block NBT or redstone contraptions could be reset or behave unexpectedly. Atlas now uses a more reliable storage-based system, preventing duplicate patch application and improving version detection.
 
 ## About
 
@@ -107,7 +118,7 @@ python3 main.py
 ## FAQ
 
 **Q: Does Atlas cause issues with Descendant+?**  
-**A:** No issues caused by Atlas itself are currently known. However, third-party mods or newly released versions of Descendant+ may introduce incompatibilities. If you find a bug that appears to be caused by Atlas, please report it.
+**A:** No issues caused by Atlas itself have been reported so far. However, third-party mods or newly released versions of Descendant+ may introduce incompatibilities. If you find a bug that appears to be caused by Atlas, please report it by opening an issue on GitHub.
 
 ---
 
