@@ -1,5 +1,5 @@
 # Descendant Atlas
-<sub>v1.3</sub>
+<sub>v1.4</sub>
 
 ![IMAGE](docs/screenshot.png)
 
@@ -15,7 +15,7 @@ While experienced users may already be familiar with GitHub releases, archive ex
 
 Its goal is to provide a straightforward way to download official Descendant+ releases, create portable mods and apply them safely without manually navigating world folders.
 
-## What's new in v1.3
+## What's new in v1.4
 
 Improved mod handling.
 
