@@ -33,7 +33,7 @@ pip install -r requirements.txt
 Run:
 
 ```bash
-python atlas.py
+python main.py
 ```
 
 ## Creating a mod
