@@ -15,6 +15,10 @@ from tui import choose, choose_select, custom_input
 
 from utils import ansi_supported
 
+
+ATLAS_VERSION = 'v1.2'
+
+
 if not ansi_supported:
     print('This terminal doesn\'t support ANSI codes, please, try to change to another terminal.')
     input('Type "CONTINUE" to continue, press enter to kill the process > ')
@@ -172,11 +176,8 @@ def download(release,root_path=lambda name:f'downloads/Descendant-{name}',alert=
 
 
 
-if __name__ == '__main__':
-    console = Console()
-    console.print(f'Welcome to [green]Descendant Atlas[/green]!\n[dim](This project is not affiliated with Gerg or the Descendant+ team)[/dim]\nMade by: [blue][link=https://github.com/Mikequez12]Mikequez12[/link][/blue]')
-
-    match choose(['Download','Mods','Quit'],title='Please, select an option'):
+def main():
+    match choose(['Download','Mods','Help','Quit'],title='Please, select an option'):
         case 'Download':
             print('Fetching GitHub...')
             release = request_release()
@@ -406,3 +407,66 @@ execute unless entity @e[type=minecraft:armor_stand,tag=descendant-atlas,tag='''
                     os.rename(f'downloads/{DIR_NAME}',f'downloads/{DIR_NAME} (modded)')
                     
                     print(f'The mod was applied successfully.')
+        case 'Help':
+            match choose([
+                'What is Atlas?',
+                'Creating a mod',
+                'Applying a mod',
+                'About'
+            ], title='Please, select an option'):
+                case 'What is Atlas?':
+                    print(f'''╭─╴\n│ {Effect.BOLD+Color.GREEN}What is Descendant Atlas?{Effect.OFF}
+│ Descendant Atlas is a tool for creating and applying
+│ Descendant+ mods.
+│
+│ A mod (.dscmod) may contain:
+│  • Datapacks
+│  • Resource packs
+│  • Structures
+│
+│ Atlas preserves the original release whenever possible.
+│ It only adds or patches the files required to load
+│ Atlas mods.
+╰─╴''')
+                case 'Creating a mod':
+                    print(f'''╭─╴\n│ {Effect.BOLD+Color.GREEN}Creating a mod{Effect.OFF}
+│ 1. Download a Descendant+ release with Atlas.
+│ 2. Make your changes.
+│ 3. Save structures using Structure Blocks.
+│ 4. Open Mods → Export mod.
+│ 5. Select the content to include.
+│ 6. Save the .dscmod.
+╰─╴''')
+                case 'Applying a mod':
+                    print(f'''╭─╴\n│ {Effect.BOLD+Color.GREEN}Applying a mod{Effect.OFF}
+│ 1. Open Mods → Import mod.
+│ 2. Select a Descendant+ release.
+│ 3. Select a .dscmod.
+│ 4. Atlas will import and configure it automatically.
+│ 5. Open the world.
+│ 6. On the first load, the descendant-atlas datapack will automatically import the mod contents.
+╰─╴''')
+                case 'About':
+                    print(f'''╭─╴\n│ {Effect.BOLD+Color.GREEN}About{Effect.OFF}
+│ Version: {ATLAS_VERSION}
+│
+│ Atlas is an independent utility for Descendant+.
+│
+│ Open source under the MIT License.
+│
+│ GitHub:
+│ https://github.com/Mikequez12/Descendant-Atlas
+╰─╴''')
+            print(f'{Effect.DIM}Other details can be found on the readme on Atlas\' GitHub:\n{Color.GREEN}https://github.com/Mikequez12/Descendant-Atlas{Effect.OFF}')
+            print()
+            input(f'{Effect.DIM}Press Enter to return...{Effect.OFF}')
+            main()
+
+if __name__ == '__main__':
+    console = Console()
+    print(f'Welcome to {Color.GREEN}Descendant Atlas{Color.OFF}! {Effect.DIM+Color.GREEN}{ATLAS_VERSION}{Effect.OFF}')
+    console.print(
+        f'[dim](This project is not affiliated with Gerg or the Descendant+ team)[/dim]\nMade by: [blue][link=https://github.com/Mikequez12]Mikequez12[/link][/blue]'
+    )
+
+    main()
