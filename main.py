@@ -16,7 +16,7 @@ from tui import choose, choose_select, custom_input
 from utils import ansi_supported
 
 
-ATLAS_VERSION = 'v1.3'
+ATLAS_VERSION = 'v1.4'
 
 
 if not ansi_supported:
