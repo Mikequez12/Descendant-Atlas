@@ -1,5 +1,5 @@
 # Descendant Atlas
-<sub>v1.0</sub>
+<sub>v1.1</sub>
 
 **Descendant Atlas** is a command-line utility for creating, managing and applying mods for **Descendant+**.
 
