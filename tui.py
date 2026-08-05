@@ -187,6 +187,8 @@ def choose_select(
     wrap=True,
     pad='  ',
     return_index=False,
+    render_index=None,
+    return_metadata=None,
     on_select_pointer=f" {_default_pointer}{Effect.REVERSE}"
 ):
     if len(options) == 0:return {}
@@ -242,13 +244,14 @@ def choose_select(
                 t = ansi_truncate(t, cols - 1)
             print(t)
         for i, (option, value) in enumerate(options.items()):
+            if render_index:value = value[render_index]
             value = value[index_values[option]] 
             spacing = spacing_ - len(ANSI_RE.sub("", option))
             if i == index:
                 italic = "\x1b[3m" if last else ""
-                t = f'│{(on_select_pointer if last else pointer)+italic} {option} {" "*spacing} < {value} > {Effect.OFF} '
+                t = f'│{(on_select_pointer if last else pointer)+italic} {option} {" "*spacing} ❮ {value} ❯ {Effect.OFF} '
             else:
-                t = f'│{Effect.DIM if i%2==1 else ""}{pad} {option} {" "*spacing} < {value} > {Effect.OFF} '
+                t = f'│{Effect.DIM if i%2==1 else ""}{pad} {option} {" "*spacing} ❮ {value} ❯ {Effect.OFF} '
 
             if (len(ANSI_RE.sub("", t)) > cols):
                 t = ansi_truncate(t, cols - 1)
@@ -282,6 +285,7 @@ def choose_select(
             render(index,False)
         elif key in ("ENTER", "SPACE"):
             render(index,True)
+            if return_metadata is not None:index_values = {k:[v,options[k][return_metadata]] for i,(k,v) in enumerate(index_values.items())}
             if return_index:
                 return index_values
             return {k:options[k][v] for k,v in index_values.items()}

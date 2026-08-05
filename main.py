@@ -16,7 +16,7 @@ from tui import choose, choose_select, custom_input
 from utils import ansi_supported
 
 
-ATLAS_VERSION = 'v1.5'
+ATLAS_VERSION = 'v1.6'
 
 
 if not ansi_supported:
@@ -233,12 +233,13 @@ def main():
                                 with zipfile.ZipFile(src, "r") as z:
                                     z.extractall(dst)
                     try:structures = choose_select({
-                        _:['No','Yes'] for _ in os.listdir(f'downloads/{dir_name}/generated/minecraft/structure')
-                    }, title='Select the structures you want to export', return_index=True).items()
+                        _:[n,['No','Yes']] for n in os.listdir(f'downloads/{dir_name}/generated') for _ in os.listdir(f'downloads/{dir_name}/generated/{n}/structure')
+                    }, title='Select the structures you want to export', return_index=1, return_metadata=0, render_index=1).items()
                     except:structures = {}
                     for k,v in structures:
-                        if v:
-                            shutil.copy(f'downloads/{dir_name}/generated/minecraft/structure/{k}',f'mods/{MOD_NAME}/structures/{k}')
+                        b,n = v
+                        if b:
+                            shutil.copy(f'downloads/{dir_name}/generated/{n}/structure/{k}',f'mods/{MOD_NAME}/structures/{k}')
                     structure = None
                     while structure != '\x1b[?9999hQuit...':
                         structure = choose([
@@ -247,20 +248,25 @@ def main():
                         if structure != '\x1b[?9999hQuit...':
                             try:
                                 parts = custom_input(
-                                    f'Placing "{structure}"... Enter origin coords {Effect.DIM}<x> <y> <z>{Effect.OFF}'
+                                    f'Placing "{structure}"... Enter origin coords {Effect.DIM}<x> <y> <z>{Effect.OFF}',accept=lambda _:len(_.split()) == 3,error_msg='Enter exactly 3 coordinates.'
                                 ).split()
 
-                                if len(parts) != 3:
-                                    print("Please enter exactly 3 coordinates.")
-                                    time.sleep(2)
-                                    continue
-
                                 x, y, z = map(int, parts)
+
+                                dim = custom_input(
+                                    f'Placing "{structure}"... Enter dimension {Effect.DIM}(Default: Overworld){Effect.OFF}'
+                                )
+                                if dim == '':
+                                    print('Setting to minecraft:overworld...')
+                                    dim = 'minecraft:overworld'
+                                else:
+                                    print(f'Setting to {dim}...')
                                 
                                 with open(f'mods/{MOD_NAME}/placing.json','r',encoding='utf-8') as file:placing = json.load(file)
                                 placing.append({
                                     'structure':structure,
-                                    'pos':[x,y,z]
+                                    'pos':[x,y,z],
+                                    'dimension':dim
                                 })
                                 with open(f'mods/{MOD_NAME}/placing.json','w',encoding='utf-8') as file:json.dump(placing, file)
 
@@ -299,7 +305,7 @@ def main():
                         input(f'{Effect.DIM}Press ENTER to exit...{Effect.OFF}')
                         exit(0)
                     MODS = [MOD_PATH for MOD_PATH,v_ in selected_mods.items() if v_]
-                    MOD_PATHFS = ['.'.join(MOD_PATH.split('.')[:-1]) for MOD_PATH in MODS]
+                    MOD_PATHFS = ['.'.join(MOD_PATH.split('.')[:-1]).split(' ')[0] for MOD_PATH in MODS]
                     if choose([
                         'Abort',
                         'Continue'
@@ -400,8 +406,10 @@ def main():
 
                     placing = []
                     for MOD_PATHF in MOD_PATHFS:
-                        with open(f'mods/.temp/{MOD_PATHF}/placing.json','r',encoding='utf-8') as file:
-                            placing.append(json.load(file))
+                        try:
+                            with open(f'mods/.temp/{MOD_PATHF}/placing.json','r',encoding='utf-8') as file:
+                                placing.append(json.load(file))
+                        except:pass
                     CODE = str(uuid.uuid4().hex)
                     with open(f'downloads/{DIR_NAME}/datapacks/descendant-atlas/data/descendant-atlas/function/update_default.mcfunction','w',encoding='utf-8') as file:
                         file.write('schedule function descendant-atlas:update 1s append')
@@ -412,10 +420,14 @@ def main():
                             TOTAL_CHANGES_JSON.append('{text:"  - '+_v+'\\n",color:white}')
                     with open(f'downloads/{DIR_NAME}/datapacks/descendant-atlas/data/descendant-atlas/function/update.mcfunction','w',encoding='utf-8') as file:
                         file.write(('''
-execute unless data storage descendant-atlas:version applied.{{UUID}} run tellraw @a [{text:"[Descendant-Atlas]",color:aqua}," ",{color:white,text:"New patch applied.\\n"},{text:"github.com/Mikequez12/Descendant-Atlas\\n",color:gray},{color:gray,text:"───────────────────────────\\n"},{color:white,text:"Version ID: "},{text:"'''+CODE+'''",color:green},{color:gray,text:"\\n───────────────────────────\\n"},{text:"List of changes\\n",color:dark_purple},'''+','.join(TOTAL_CHANGES_JSON)+
+execute unless data storage descendant-atlas:version applied.{{UUID}} run tellraw @a [{text:"🌍 Descendant-Atlas >",color:aqua}," ",{color:white,text:"New patch applied.\\n"},{text:"github.com/Mikequez12/Descendant-Atlas\\n",color:gray},{color:gray,text:"───────────────────────────\\n"},{color:white,text:"Version ID: "},{text:"'''+CODE+'''",color:green},{color:gray,text:"\\n───────────────────────────\\n"},{text:"List of changes\\n",color:dark_purple},'''+','.join(TOTAL_CHANGES_JSON)+
 f''']
 '''+'\n'.join([
-    'execute unless data storage descendant-atlas:version applied.{{UUID}} run place template descendant-atlas:'+f'{".".join(_.get("structure").split(".")[:-1])} {" ".join(map(str,_.get("pos")))}' for placing_ in placing for _ in placing_
+    'execute unless data storage descendant-atlas:version applied.{{UUID}} '+f'in {_.get('dimension','minecraft:overworld')} run forceload add {_.get("pos")[0] // 16} {_.get("pos")[2] // 16}' for placing_ in placing for _ in placing_
+])+'\n\n'+'\n'.join([
+    'execute unless data storage descendant-atlas:version applied.{{UUID}} '+f'in {_.get('dimension','minecraft:overworld')} run place template descendant-atlas:{".".join(_.get("structure").split(".")[:-1])} {" ".join(map(str,_.get("pos")))}' for placing_ in placing for _ in placing_
+])+'\n\n'+'\n'.join([
+    'execute unless data storage descendant-atlas:version applied.{{UUID}} '+f'in {_.get('dimension','minecraft:overworld')} run forceload remove {_.get("pos")[0] // 16} {_.get("pos")[2] // 16}' for placing_ in placing for _ in placing_
 ])+'''
 execute unless data storage descendant-atlas:version applied.{{UUID}} run data modify storage descendant-atlas:version applied set value {{{UUID}}:1b}
 ''').replace('{{UUID}}',CODE))
@@ -435,7 +447,12 @@ execute unless data storage descendant-atlas:version applied.{{UUID}} run data m
 
                     shutil.rmtree(f'mods/.temp/'+MOD_PATHF)
 
-                    if not DIR_NAME.endswith('(modded)'):os.rename(f'downloads/{DIR_NAME}',f'downloads/{DIR_NAME} (modded)')
+                    def rename_(n=0):
+                        try:os.rename(f'downloads/{DIR_NAME}',f'downloads/{DIR_NAME} (modded){"" if n == 0 else f" ({n})"}')
+                        except FileExistsError:rename_(n+1)
+                    
+                    if not DIR_NAME.endswith('(modded)'):
+                        rename_()
                     
                     print(f'The mod was applied successfully.')
                     print(f'{Color.YELLOW}WARNING: {Color.WHITE}The instalation isn\'t done yet! If you add another mod without finishing the instalation, your world may get corrupted. To finish de instalation just open the world in minecraft and check that the chat registers the changes.')

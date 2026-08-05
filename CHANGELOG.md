@@ -56,3 +56,13 @@ Improved diagnostics and developer tools.
 - Added improved environment detection.
 - Added detailed debug output for Atlas operations.
 - Improved error reporting to make issues easier to identify.
+
+# v1.6
+
+### Features
+- Improved the reliability of automatic structure placement.
+- Atlas now temporarily force-loads destination chunks while placing structures.
+- Improved the internal mod installation process.
+- Various terminal interface improvements.
+- Internal code cleanup and maintenance.
+- Removed example mods.

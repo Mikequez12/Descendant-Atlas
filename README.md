@@ -1,5 +1,5 @@
 # Descendant Atlas
-<sub>v1.5</sub>
+<sub>v1.6</sub>
 
 ![IMAGE](docs/screenshot.png)
 
@@ -15,13 +15,13 @@ While experienced users may already be familiar with GitHub releases, archive ex
 
 Its goal is to provide a straightforward way to download official Descendant+ releases, create portable mods and apply them safely without manually navigating world folders.
 
-## What's new in v1.5
+## What's New in v1.6
 
-Improved diagnostics and developer tools.
+### Improved installation reliability
+Atlas now performs additional setup steps when applying mods to ensure structures can be placed more reliably across dimensions during the first world load.
 
-- Added improved environment detection.
-- Added detailed debug output for Atlas operations.
-- Improved error reporting to make issues easier to identify.
+### Better terminal interface
+The terminal interface has received several quality-of-life improvements, making Atlas easier to use.
 
 > [!WARNING]
 > Installing another mod before opening the world can corrupt your installation.
@@ -33,7 +33,13 @@ Descendant Atlas is an independent utility built around Descendant+.
 
 Atlas is **not** a fork of Descendant+, does not replace it and is not affiliated with its development team. Instead, it complements existing Descendant+ releases by providing tools for downloading, packaging and applying community-made modifications.
 
-One of Atlas' core design principles is to preserve the original release whenever possible. Rather than altering existing game content, Atlas adds only the minimum required components needed to manage and load Atlas mods.
+Atlas is built around three design principles:
+
+- Preserve official Descendant+ releases whenever possible.
+- Keep mods portable through the `.dscmod` format.
+- Automate repetitive installation tasks without changing gameplay by itself.
+
+Rather than altering existing game content, Atlas only adds or patches the minimum components required to manage and load Atlas mods.
 
 ## Features
 
@@ -120,7 +126,7 @@ python3 main.py
 ## FAQ
 
 **Q: Does Atlas cause issues with Descendant+?**  
-**A:** No issues caused by Atlas itself have been reported so far. However, third-party mods or newly released versions of Descendant+ may introduce incompatibilities. If you find a bug that appears to be caused by Atlas, please report it by opening an issue on GitHub.
+**A:** No known issues caused by Atlas itself have been reported so far. However, third-party mods or newly released versions of Descendant+ may introduce incompatibilities. If you find a bug that appears to be caused by Atlas, please report it by opening an issue on GitHub.
 
 ---
 
@@ -154,8 +160,8 @@ python3 main.py
 
 ---
 
-**Q: Why do I need to open the descendant world folder after modding it?**
-**A:** Atlas doesn't directly modify your world when using the app, it just drops the resources. This is made for various reasons, but most importantly easy to debug and way more safe. If you don't open the world and just add another instalation, chances are the entire world gets erased, this is caused because when executing Atlas, it thinks it was installed, and gets glitched. This has not been 100% tested and your world can continue as normal after this happening. This practice is not recommended: please, run the Descendant+ release after modding it.
+**Q: Why do I need to open the descendant world after modding it?**
+**A:** Atlas doesn't directly modify your in-game world when using the app, it just drops the resources and how to apply them. This is made for various reasons, but most importantly: it's easy to debug and way more safe. If you don't open the world and just add another installation, chances are the entire world gets erased, this is caused because when executing Atlas, it thinks it was installed, and gets glitched. This has not been 100% tested and your world can continue as normal after this happening. This practice is not recommended: please, launch the world after modding it.
 
 ## Project structure
 
@@ -171,4 +177,4 @@ mods/
 > This project is still experimental. Please make a backup before importing any files. Better safe than sorry.
 
 > [!CAUTION]
-> Making to modpack instalation without loading the world in between will cause issues: After every instalation you need to run the world to finish the installing process.
+> Installing multiple modpacks without loading the world in between will cause issues: After every installation you need to run the world to finish the installing process.
