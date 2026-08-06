@@ -1,201 +1,104 @@
-# Descendant Atlas
-<sub>v1.7</sub>
+# v1.0
 
-![IMAGE](docs/screenshot.png)
+Initial release.
 
-**Descendant Atlas** is a command-line utility for creating, managing and applying mods for **Descendant+**.
-
-Instead of manually copying datapacks, structures and resource packs between worlds, Descendant Atlas packages them into a portable `.dscmod` file that can later be applied to another installation.
-
-## Why Atlas?
-
-Descendant Atlas was created to make installing and modifying Descendant+ simpler.
-
-While experienced users may already be familiar with GitHub releases, archive extraction and Minecraft's world structure, many players are not. Atlas automates those repetitive tasks so users can focus on playing and creating content instead of managing files.
-
-Its goal is to provide a straightforward way to download official Descendant+ releases, create portable mods and apply them safely without manually navigating world folders.
-
-Atlas also includes a lightweight Minecraft launcher capable of starting compatible installations without relying on the official launcher interface.
-
-## What's New in v1.7
-
-### Built-in Minecraft launcher (Beta)
-
-Atlas can now launch compatible Minecraft installations directly, creating an isolated game directory while reusing your existing launcher assets and versions.
-
-### Configuration system
-
-A new interactive configuration editor makes it possible to configure your Minecraft directory and target version without manually editing configuration files.
-
-### Better terminal compatibility
-
-Atlas now detects ANSI and Unicode support automatically and gracefully falls back when terminal features are unavailable, allowing it to run correctly on a much wider range of terminals.
-
-### General improvements
-
-- Improved terminal interface.
-- Better cross-platform support.
-- Improved resource pack importing.
-- Better handling of releases with multiple downloadable assets.
-- More robust configuration handling.
-- Various bug fixes and internal improvements.
-
-> [!WARNING]
-> Installing another mod before opening the world can corrupt your installation.
-> After every mod installation, launch the world once to let Atlas finish applying the changes before importing another mod.
-
-## About
-
-Descendant Atlas is an independent utility built around Descendant+.
-
-Atlas is **not** a fork of Descendant+, does not replace it and is not affiliated with its development team. Instead, it complements existing Descendant+ releases by providing tools for downloading, packaging and applying community-made modifications.
-
-Atlas is built around three design principles:
-
-- Preserve official Descendant+ releases whenever possible.
-- Keep mods portable through the `.dscmod` format.
-- Automate repetitive installation tasks without changing gameplay by itself.
-
-Rather than altering existing game content, Atlas only adds or patches the minimum components required to manage and load Atlas mods.
-
-## Features
-
+### Features
 - Download official Descendant+ releases directly from GitHub.
-- Create portable `.dscmod` mod packages.
-- Import many mods at the same time.
-- Apply mods into existing Descendant+ worlds.
-- Merge resource packs into the world's `resources.zip`.
-- Import structures automatically.
-- Apply structure placement automatically on first world load.
-- Preserve compatibility with existing datapacks.
-- Launch Minecraft directly from Atlas (Beta).
-- Built-in configuration editor.
-- Automatic detection and graceful fallback for ANSI and Unicode terminals.
-- Cross-platform support (Windows, Linux and macOS).
+- Export mods into portable `.dscmod` packages.
+- Import `.dscmod` packages into existing Descendant+ worlds.
+- Merge resource packs into `resources.zip`.
+- Import structures and configure automatic placement.
+- Automatic datapack patching for compatibility.
 
-## Requirements
+# v1.1
 
-- Python 3.10 or later (when running from source)
-- Git (when cloning the repository) or download `.zip` (not recommended)
+Fixed ANSI handling.
 
-## Installation
+### Features
+- Improved compatibility with legacy Windows consoles by detecting ANSI support automatically.
+- Improved compatibility with non-Unicode terminals.
 
-### Windows
+# v1.2
 
-#### Option 1 — Executable (Recommended)
+Improved usability and project documentation.
 
-Download the latest `.exe` from the [Releases](https://github.com/Mikequez12/Descendant-Atlas/releases) page and run it.
+### Features
+- Added an integrated Help section.
+- Added the MIT License.
+- Improved the installation guide and project documentation.
+- Added an About page inside Atlas.
+- Improved first-time user experience.
 
-> [!NOTE]
-> Windows SmartScreen may display a warning because Atlas is not code-signed. If you trust the release, click **More info** → **Run anyway**.
+# v1.3
 
-#### Option 2 — From source
+Improved `descendant-atlas` datapack.
 
-Install Python from [python.org](https://www.python.org/downloads/) if it isn't already installed.
+### Features
+- Fixed an issue that could cause patches to be applied multiple times.
+- Mods are now initialized only once after installation.
+- Replaced entity-based persistent state tracking with storage-based tracking for improved reliability.
 
-```bat
-git clone https://github.com/Mikequez12/descendant-atlas
-cd descendant-atlas
-python -m pip install -r requirements.txt
-python main.py
-```
-### Linux
+# v1.4
 
-Ensure Python 3 is installed, then run:
+Improved mod importing workflow.
 
-```sh
-git clone https://github.com/Mikequez12/descendant-atlas
-cd descendant-atlas
-python3 -m pip install -r requirements.txt
-python3 main.py
-```
+### Features
+- Added support for importing multiple `.dscmod` packages in a single operation.
+- All imported mods are now applied together the next time the world is loaded.
+- Added two example mods: `bosstitle.dscmod` and `Dark-Market.dscmod`.
+- Added a `Press ENTER to continue...` prompt for executable users.
 
-### macOS
+# v1.5
 
-Ensure Python 3 is installed (Homebrew is recommended), then run:
+Improved diagnostics and developer tools.
 
-```sh
-git clone https://github.com/Mikequez12/descendant-atlas
-cd descendant-atlas
-python3 -m pip install -r requirements.txt
-python3 main.py
-```
+### Features
+- Added improved environment detection.
+- Added detailed debug output for Atlas operations.
+- Improved error reporting to make issues easier to identify.
 
-## Creating a mod
+# v1.6
 
-1. Download a Descendant+ release.
-2. Create and save your changes using a `structure block`.
-3. Select **Mods → Export mod**.
-4. Choose:
-   - Datapacks
-   - Resource packs
-   - Structures
-5. Configure structure placement (optional).
-6. A `.dscmod` package will be created.
+### Features
+- Improved the reliability of automatic structure placement.
+- Atlas now temporarily force-loads destination chunks while placing structures.
+- Improved the internal mod installation process.
+- Various terminal interface improvements.
+- Internal code cleanup and maintenance.
+- Removed example mods.
 
-## Applying a mod
+# v1.7
+### New features
+- Added a built-in Minecraft launcher (Beta).
+- Added an interactive configuration editor.
+- Added configurable Minecraft installation directory.
+- Added configurable Minecraft version.
+- Atlas now automatically creates a temporary game directory when launching Minecraft.
+- Downloaded worlds are automatically linked into the temporary launcher instance.
+- Added automatic configuration reset for first-time users.
 
-1. Select **Mods → Import mod**.
-2. Choose a downloaded Descendant+ release.
-3. Select a `.dscmod`.
-4. Descendant Atlas will:
-   - copy datapacks,
-   - merge resource packs,
-   - import structures,
-   - patch the required load functions.
+### Improvements
+- Greatly improved release extraction.
+- Improved terminal interface rendering.
+- Improved configuration management.
+- Improved structure placement pipeline.
+- Improved resource pack importing.
+- Improved compatibility with different operating systems.
+- Improved progress and status messages throughout the application.
+- Better automatic detection of ANSI-capable terminals.
+- Added automatic Unicode fallback for legacy terminals.
 
-## FAQ
+### Internal changes
+- Refactored configuration handling.
+- Refactored terminal UI rendering.
+- Added portable ANSI fallback implementation.
+- Added portable Unicode fallback implementation.
+- Reworked menu system.
+- Simplified release download workflow.
+- Improved launcher integration architecture.
 
-**Q: Does Atlas cause issues with Descendant+?**  
-**A:** No known issues caused by Atlas itself have been reported so far. However, third-party mods or newly released versions of Descendant+ may introduce incompatibilities. If you find a bug that appears to be caused by Atlas, please report it by opening an issue on GitHub.
-
----
-
-**Q: Does Atlas use real Minecraft mods?**  
-**A:** No. Atlas uses `.dscmod` files, which package datapacks, resource packs, structures and other world modifications.
-
----
-
-**Q: Does Atlas work on Linux?**  
-**A:** Yes. Atlas is designed to be cross-platform and should work on Linux.
-
----
-
-**Q: How does Atlas work?**  
-**A:** Atlas downloads releases from the Descendant+ GitHub repository and applies modifications locally. If you're curious about the implementation, feel free to read the source code in `main.py`.
-
----
-
-**Q: Is Atlas a virus?**  
-**A:** No. Atlas is open source and only downloads and modifies files from GitHub repositories.
-
----
-
-**Q: Where can I find Atlas mods?**  
-**A:** There is currently no official repository for Atlas mods. You'll need to obtain `.dscmod` files directly from their creators.
-
----
-
-**Q: Why doesn't Atlas include modified Descendant+ releases?**  
-**A:** Atlas intentionally distributes the official Descendant+ releases without altering their contents. Any changes introduced by Atlas are limited to the infrastructure required to load Atlas mods, helping keep releases as close as possible to the originals.
-
----
-
-**Q: Why do I need to open the descendant world after modding it?**
-**A:** Atlas doesn't directly modify your in-game world when using the app, it just drops the resources and how to apply them. This is made for various reasons, but most importantly: it's easy to debug and way more safe. If you don't open the world and just add another installation, chances are the entire world gets erased, this is caused because when executing Atlas, it thinks it was installed, and gets glitched. This has not been 100% tested and your world can continue as normal after this happening. This practice is not recommended: please, launch the world after modding it.
-
-## Project structure
-
-```
-downloads/
-mods/
-    .resourcepacks/
-    *.dscmod
-```
-
-## Before you start
-> [!CAUTION]
-> This project is still experimental. Please make a backup before importing any files. Better safe than sorry.
-
-> [!CAUTION]
-> Installing multiple modpacks without loading the world in between will cause issues: After every installation you need to run the world to finish the installing process.
+### Bug fixes
+- Fixed several extraction edge cases.
+- Fixed issues when importing releases containing nested ZIP files.
+- Fixed various terminal compatibility issues.
+- Fixed several file handling edge cases during import/export.
