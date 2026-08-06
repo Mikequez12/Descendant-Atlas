@@ -1,5 +1,5 @@
 # Descendant Atlas
-<sub>v1.6</sub>
+<sub>v1.7</sub>
 
 ![IMAGE](docs/screenshot.png)
 
@@ -15,13 +15,30 @@ While experienced users may already be familiar with GitHub releases, archive ex
 
 Its goal is to provide a straightforward way to download official Descendant+ releases, create portable mods and apply them safely without manually navigating world folders.
 
-## What's New in v1.6
+Atlas also includes a lightweight Minecraft launcher capable of starting compatible installations without relying on the official launcher interface.
 
-### Improved installation reliability
-Atlas now performs additional setup steps when applying mods to ensure structures can be placed more reliably across dimensions during the first world load.
+## What's New in v1.7
 
-### Better terminal interface
-The terminal interface has received several quality-of-life improvements, making Atlas easier to use.
+### Built-in Minecraft launcher (Beta)
+
+Atlas can now launch compatible Minecraft installations directly, creating an isolated game directory while reusing your existing launcher assets and versions.
+
+### Configuration system
+
+A new interactive configuration editor makes it possible to configure your Minecraft directory and target version without manually editing configuration files.
+
+### Better terminal compatibility
+
+Atlas now detects ANSI and Unicode support automatically and gracefully falls back when terminal features are unavailable, allowing it to run correctly on a much wider range of terminals.
+
+### General improvements
+
+- Improved terminal interface.
+- Better cross-platform support.
+- Improved resource pack importing.
+- Better handling of releases with multiple downloadable assets.
+- More robust configuration handling.
+- Various bug fixes and internal improvements.
 
 > [!WARNING]
 > Installing another mod before opening the world can corrupt your installation.
@@ -51,6 +68,10 @@ Rather than altering existing game content, Atlas only adds or patches the minim
 - Import structures automatically.
 - Apply structure placement automatically on first world load.
 - Preserve compatibility with existing datapacks.
+- Launch Minecraft directly from Atlas (Beta).
+- Built-in configuration editor.
+- Automatic detection and graceful fallback for ANSI and Unicode terminals.
+- Cross-platform support (Windows, Linux and macOS).
 
 ## Requirements
 

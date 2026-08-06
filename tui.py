@@ -11,9 +11,57 @@ else:
     import termios
     import tty
 
-from utils import unicode_supported
+from utils import unicode_supported, ansi_supported
 
-_default_pointer = '❯' if unicode_supported else '>'
+_default_pointer = '❯'
+_default_pointer_rev = '❮'
+
+if not unicode_supported:
+    print('ERROR: This terminal doesn\'t support UNICODE codes. Atlas has a simple system that tries to get rid of UNICODE by default.')
+    if input('Do you wanna enable it [Y/N]? ').upper() not in ['YES','Y','1','ACCEPT','OK']:
+        print('Aborting...')
+        exit(0)
+
+if not unicode_supported:
+    import sys
+
+    class ASCIIStdout:
+        REPLACE = {
+            "❯": ">",
+            "❮": "<",
+            "╭": "+",
+            "╰": "+",
+            "╮": "+",
+            "╯": "+",
+            "│": "|",
+            "─": "-",
+            "█": "#",
+            "░": ".",
+            "…": "...",
+        }
+
+        def __init__(self, real):
+            self.real = real
+
+        def write(self, text):
+            for old, new in self.REPLACE.items():
+                text = text.replace(old, new)
+            return self.real.write(text)
+
+        def flush(self):
+            return self.real.flush()
+
+        def __getattr__(self, name):
+            return getattr(self.real, name)
+
+    sys.stdout = ASCIIStdout(sys.stdout)
+
+
+
+
+
+
+
 
 
 def _read_key():
@@ -38,6 +86,9 @@ def _read_key():
 
             if c == b"\x1b":
                 return "ESC"
+            
+            if c == b".":
+                return "."
 
     else:
         fd = sys.stdin.fileno()
@@ -55,6 +106,9 @@ def _read_key():
                     "[C": "RIGHT",
                     "[D": "LEFT",
                 }.get(seq, "ESC")
+            
+            if c == ".":
+                return "."
 
             if c == "\r":
                 return "ENTER"
@@ -65,8 +119,16 @@ def _read_key():
         finally:
             termios.tcsetattr(fd, termios.TCSADRAIN, old)
 
-def cls(n):
-    print(f"\x1b[{n}F", end="")
+def cls(n=None,w=None,k=False):
+    if ansi_supported:
+        if n is not None:print(f"\x1b[{n}F", end="")
+        if w is not None:print(f"\x1b[{w}G", end="")
+        if k:print('\x1b[J',end='')
+    else:
+        if os.name == "nt":
+            os.system('cls')
+        else:
+            os.system('clear')
 
 def choose(
     options,
@@ -139,7 +201,7 @@ def choose(
                 italic = "\x1b[3m" if last else ""
                 t = f'│{(on_select_pointer if last else pointer)+italic} {option} {Effect.OFF}'
             else:
-                t = f'│{Effect.DIM if i%2==1 else ""}{pad} {option} {Effect.OFF}'
+                t = f'│{pad} {option} {Effect.OFF}'
 
             if (len(ANSI_RE.sub("", t)) > cols):
                 t = ansi_truncate(t, cols - 1)
@@ -171,7 +233,6 @@ def choose(
             return options[index]
 
         elif key == "ESC":
-            print('\n'*(len(options) + add))
             raise KeyboardInterrupt
         
 
@@ -189,7 +250,9 @@ def choose_select(
     return_index=False,
     render_index=None,
     return_metadata=None,
-    on_select_pointer=f" {_default_pointer}{Effect.REVERSE}"
+    on_select_pointer=f" {_default_pointer}{Effect.REVERSE}",
+    ch_pointer=_default_pointer,
+    rev_ch_pointer=_default_pointer_rev
 ):
     if len(options) == 0:return {}
 
@@ -249,9 +312,9 @@ def choose_select(
             spacing = spacing_ - len(ANSI_RE.sub("", option))
             if i == index:
                 italic = "\x1b[3m" if last else ""
-                t = f'│{(on_select_pointer if last else pointer)+italic} {option} {" "*spacing} ❮ {value} ❯ {Effect.OFF} '
+                t = f'│{(on_select_pointer if last else pointer)+italic} {option} {" "*spacing} {rev_ch_pointer} {value} {ch_pointer} {Effect.OFF} '
             else:
-                t = f'│{Effect.DIM if i%2==1 else ""}{pad} {option} {" "*spacing} ❮ {value} ❯ {Effect.OFF} '
+                t = f'│{pad} {option} {" "*spacing} {rev_ch_pointer} {value} {ch_pointer} {Effect.OFF} '
 
             if (len(ANSI_RE.sub("", t)) > cols):
                 t = ansi_truncate(t, cols - 1)
@@ -291,7 +354,6 @@ def choose_select(
             return {k:options[k][v] for k,v in index_values.items()}
 
         elif key == "ESC":
-            print('\n'*(len(options) + add))
             raise KeyboardInterrupt
         
 
@@ -350,3 +412,114 @@ def custom_input(title,prefix=f'{_default_pointer} ',accept=lambda _:True,error_
         print(f'| {prefix}'+' '*(cols-len(prefix)-2))
         cls(2)
         return custom_input(title,prefix,accept,error_msg,error_format,_as_error=True)
+    
+
+def ask_config(
+    default_config={
+        'minecraft-launcher-directory':str,
+        'minecraft-version':str,
+        '.config-version':str
+    },config_values:dict=None,
+    title='Config',
+    pointer=f"{_default_pointer} {Effect.REVERSE}",
+    clear=True,
+    wrap=True,
+    pad='  '
+):
+    index = 0
+
+    ANSI_RE = re.compile(r"\x1b\[[0-9;?]*[ -/]*[@-~]")
+
+    config = {k:v for k,v in default_config.items()}
+
+    if config_values:
+        for k,v in config_values.items():
+            c = default_config.get(k, object)
+            if not isinstance(v,c):
+                print(f'Invalid type {k}: got {v} expected {c}.')
+                config[k] = c
+            else:
+                config[k] = v
+
+    add = len([k for k in config if not k[0] == '.']) + 2
+
+    spacing_ = max([len(_) for _ in config]) + 2
+
+    print('\n'*(add - 1))
+
+    DEBUG = False
+
+    def render(index,last,DEBUG,avoid_cls=False):
+        italic = "\x1b[3m"
+
+        add = len([k for k in config if DEBUG or k[0] != '.']) + 2
+
+        if not avoid_cls and clear:cls(add)
+        print(f'╭╴{title}')
+        for i,(k,v) in enumerate(config.items()):
+            if k[0] == '.' and not DEBUG:continue
+            if v is None: v = f'{Effect.DIM+italic}unset{Effect.DIM}'
+            spacing = spacing_ - len(ANSI_RE.sub("", k))
+            print(f'│  {pointer if i == index else pad} {italic if last and i == index else ""}{Effect.DIM if k[0] == "." else ""}{k} {" " * spacing} {v} {Effect.OFF}')
+        print('╰╴')
+
+    while True:
+        render(index,False,DEBUG)
+        
+        key = _read_key()
+
+        vis_config = [k for k in config if DEBUG or k[0] != '.']
+
+        if key == "UP":
+            if wrap:
+                index = (index - 1) % len(vis_config)
+            elif index:
+                return -1
+
+        elif key == "DOWN":
+            if wrap:
+                index = (index + 1) % len(vis_config)
+            elif index < len(vis_config) - 1:
+                return 1
+        elif key == "RIGHT":
+            """
+            config_values[list(config.keys())[index]] += 1
+            config_values[list(config.keys())[index]] %= len(list(config.values())[index])
+            """
+            n = len(vis_config)-index+1
+            _ = list(config.keys())[index]
+            if clear:cls(n,spacing_+len(ANSI_RE.sub("",pointer))+7)
+            if config[_] is None:config[_] = 'unset'
+            i = len(config[_])
+            print('\x1b[0K',end=Effect.REVERSE+' '*i)
+            if clear:cls(None,spacing_ + 9)
+            new_value = input()
+            if clear:cls(index+1,spacing_ + len(new_value) + 9,k=True)
+            if new_value == '' and _ not in default_config.keys():
+                del config[_]
+                vis_config.pop(0)
+                index -= 1
+                if index < 0:
+                    index = len(vis_config) - 1
+            else:
+                config[_] = new_value
+            print(Effect.OFF+'\n'*len(vis_config))
+            m = index + 4 - len(config)
+        elif key == "LEFT":
+            config_values[list(config.keys())[index]] -= 1
+            if config_values[list(config.keys())[index]] == -1:
+                config_values[list(config.keys())[index]] = len(list(config.values())[index]) - 1
+            render(index,False,DEBUG)
+        elif key == ".":
+            add = len([k for k in config if DEBUG and k[0] == '.']) + 4
+            if clear:cls(add,k=True)
+            DEBUG = not(DEBUG)
+            render(index,False,DEBUG,avoid_cls=True)
+        elif key in ("ENTER", "SPACE"):
+            render(index,True,DEBUG)
+            config = {k:None if isinstance(v,type) else v for k,v in config.items()}
+        
+            return config
+
+        elif key == "ESC":
+            raise KeyboardInterrupt

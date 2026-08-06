@@ -66,3 +66,39 @@ Improved diagnostics and developer tools.
 - Various terminal interface improvements.
 - Internal code cleanup and maintenance.
 - Removed example mods.
+
+# v1.7
+### New features
+* Added a built-in Minecraft launcher (Beta).
+* Added an interactive configuration editor.
+* Added configurable Minecraft installation directory.
+* Added configurable Minecraft version.
+* Atlas now automatically creates a temporary game directory when launching Minecraft.
+* Downloaded worlds are automatically linked into the temporary launcher instance.
+* Added automatic configuration reset for first-time users.
+
+### Improvements
+* Greatly improved release extraction.
+* Improved terminal interface rendering.
+* Improved configuration management.
+* Improved structure placement pipeline.
+* Improved resource pack importing.
+* Improved compatibility with different operating systems.
+* Improved progress and status messages throughout the application.
+* Better automatic detection of ANSI-capable terminals.
+* Added automatic Unicode fallback for legacy terminals.
+
+### Internal changes
+* Refactored configuration handling.
+* Refactored terminal UI rendering.
+* Added portable ANSI fallback implementation.
+* Added portable Unicode fallback implementation.
+* Reworked menu system.
+* Simplified release download workflow.
+* Improved launcher integration architecture.
+
+### Bug fixes
+* Fixed several extraction edge cases.
+* Fixed issues when importing releases containing nested ZIP files.
+* Fixed various terminal compatibility issues.
+* Fixed several file handling edge cases during import/export.

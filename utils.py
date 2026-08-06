@@ -1,5 +1,6 @@
 import os
 import sys
+import re
 
 ansi_supported = True
 
@@ -21,3 +22,16 @@ unicode_supported = (
     sys.stdout.encoding
     and sys.stdout.encoding.lower().startswith("utf")
 )
+
+class Empty:
+    def __init__(self):pass
+    def __getattribute__(self, name):return ''
+
+class Console:
+    def __init__(self):pass
+    def print(self,*args):
+        args = [re.sub(r"\[/?[^\[\]]+\]", "", arg) for arg in args]
+        print(*args)
+
+Color = Empty()
+Effect = Empty()

@@ -5,24 +5,29 @@ from colorist import Color, Effect
 import zipfile
 import os
 import pathlib
+import threading
+import subprocess
 import shutil
 import json
 import time
 import stat
 import uuid
 
-from tui import choose, choose_select, custom_input
-
+from tui import choose, choose_select, custom_input, ask_config
 from utils import ansi_supported
+import atlas_launcher
 
 
-ATLAS_VERSION = 'v1.6'
+ATLAS_VERSION = 'v1.7'
 
 
 if not ansi_supported:
-    print('This terminal doesn\'t support ANSI codes, please, try to change to another terminal.')
-    input('Type "CONTINUE" to continue, press enter to kill the process > ')
-    exit(0)
+    print('ERROR: This terminal doesn\'t support ANSI codes. Atlas has a simple system that tries to get rid of ANSI by default.')
+    if input('Do you wanna enable it [Y/N]? ').upper() in ['YES','Y','1','ACCEPT','OK']:
+        from utils import Color, Effect, Console
+    else:
+        print('Aborting...')
+        exit(0)
 
 
 def request_release(t="Please, select a release"):
@@ -89,8 +94,7 @@ def download(release,root_path=lambda name:f'downloads/Descendant-{name}',alert=
         if ask_overwrite:
             if choose(['Yes','No'],title=f'The release {release["name"]} is already downloaded, do you want to overwrite it?') == 'No':
                 print('Aborting...')
-                input(f'{Effect.DIM}Press ENTER to exit...{Effect.OFF}')
-                exit(0)
+                return #
         os.chmod(root_path, stat.S_IWRITE)
         shutil.rmtree(root_path, ignore_errors=True)
 
@@ -167,6 +171,18 @@ def download(release,root_path=lambda name:f'downloads/Descendant-{name}',alert=
 
     if alert:print(f'The release was downloaded successfully. Check {Color.GREEN}"{P}"{Effect.OFF}')
 
+def config(default_config:dict=None) -> dict:
+    with open('config.json','r',encoding='utf-8') as file:
+        CONFIG = json.load(file)
+    if default_config:
+        for k,v in default_config.items():
+            CONFIG[k] = v
+        with open('config.json','w',encoding='utf-8') as file:
+            json.dump(CONFIG,file)
+        return CONFIG
+    CONFIG = ask_config(config_values=CONFIG)
+    with open('config.json','w',encoding='utf-8') as file:
+        json.dump(CONFIG,file)
 
 
 
@@ -177,14 +193,88 @@ def download(release,root_path=lambda name:f'downloads/Descendant-{name}',alert=
 
 
 
-def main():
-    match choose(['Download','Mods','Help','Quit'],title='Please, select an option'):
+
+
+
+def reset_config():
+    if os.name == "nt":
+        config({
+            'minecraft-launcher-directory':r'%appdata%\.minecraft',
+            'minecraft-version':'1.21.10',
+            '.config-version':ATLAS_VERSION
+        })
+    else:
+        config(config_values={
+            'minecraft-launcher-directory':r'~/.minecraft',
+            'minecraft-version':'1.21.10',
+            '.config-version':ATLAS_VERSION
+        })
+    print(f'{Color.YELLOW}WARNING: {Color.OFF}Your system config has been setted automaticaly, please check if the info is correct. {Effect.DIM}Especially in MacOS.{Effect.OFF}')
+
+def main(init_text=''):
+    print(init_text,end='')
+    with open('config.json','r',encoding='utf-8') as file:
+        CONFIG = json.load(file)
+    
+    if CONFIG == {}:
+        reset_config()
+        
+    match choose(['Download','Mods',f'Launch Minecraft localy (BETA)','Config','Help','Quit'],title='Please, select an option'):
+        case 'Quit':exit(0)
+        case 'Config':
+            match choose(
+                [
+                    'Reset config',
+                    'Edit config'
+                ],
+                title='Config'
+            ):
+                case 'Reset config':
+                    reset_config()
+                case 'Edit config':
+                    config()
+            main()
+        case 'Launch Minecraft localy (BETA)':
+            # Thanks to sdfxf31 for the idea
+            
+            gd = CONFIG.get('minecraft-launcher-directory')
+            ver = CONFIG.get('minecraft-version')
+            
+            if gd is None:
+                print(f'{Color.RED}ERROR: {Color.OFF}Couldn\'t find {Color.YELLOW}minecraft-launcher-directory{Color.OFF} on the config, please, set it or reset the config.')
+            else:
+                print('Generating starting command...',end=' ')
+                command = atlas_launcher.build_launch_command(
+                    pathlib.Path(os.path.expandvars(pathlib.Path(gd) / 'versions')),
+                    ver,
+                    pathlib.Path(os.path.expandvars(pathlib.Path(gd))),
+                    pathlib.Path(os.path.expandvars(pathlib.Path(gd) / "assets")),
+                )
+                print('[DONE]')
+
+                mc = pathlib.Path(".mc")
+                mc.mkdir(exist_ok=True)
+
+                saves = mc / "saves"
+
+                if saves.exists() and not saves.is_symlink():
+                    shutil.rmtree(saves)
+
+                if not saves.exists():
+                    saves.symlink_to(pathlib.Path("downloads").resolve(), target_is_directory=True)
+
+                print(f'Running minecraft {Effect.DIM}(on a different thread){Effect.OFF}...',end=' ')
+                dir_ = pathlib.Path(__file__).parent / '.mc'
+                threading.Thread(target=lambda _=command + ['--gameDir',dir_]:subprocess.Popen(_,creationflags=subprocess.CREATE_NEW_CONSOLE,cwd=dir_),daemon=True).start()
+                print('[DONE]')
+
+            main()
         case 'Download':
             print('Fetching GitHub...')
             release = request_release()
 
             download(release)
-            input(f'{Effect.DIM}Press Enter to leave...{Effect.OFF}')
+            main()
         case 'Mods':
             match choose([
                 'Import mods',
@@ -197,8 +287,7 @@ def main():
 
                     if dir_name is None:
                         print('No releases are installed. Please install at least one to continue.')
-                        input(f'{Effect.DIM}Press ENTER to exit...{Effect.OFF}')
-                        exit(0)
+                        return main() #
                     
                     MOD_NAME = custom_input(title='Select a name for the mod',accept=lambda _:_.strip() != '',error_msg='Invalid path')
                     if os.path.exists(f'mods/{MOD_NAME}') or os.path.exists(f'mods/{MOD_NAME}.dscmod') or os.path.exists(f'mods/{MOD_NAME}.zip'):
@@ -207,8 +296,7 @@ def main():
                             'Overwrite'
                         ],title='The mod already exists. Do you want to overwrite it?') == 'Abort':
                             print('Aborting...')
-                            input(f'{Effect.DIM}Press ENTER to exit...{Effect.OFF}')
-                            exit(0)
+                            return main() #
                         if os.path.exists(f'mods/{MOD_NAME}'):shutil.rmtree(f'mods/{MOD_NAME}')
                         if os.path.exists(f'mods/{MOD_NAME}.dscmod'):os.remove(f'mods/{MOD_NAME}.dscmod')
                         if os.path.exists(f'mods/{MOD_NAME}.zip'):os.remove(f'mods/{MOD_NAME}.zip')
@@ -295,15 +383,13 @@ def main():
                     ], title='Please, select a release')
                     if DIR_NAME is None:
                         print('No releases are installed. Please install at least one to continue.')
-                        input(f'{Effect.DIM}Press ENTER to exit...{Effect.OFF}')
-                        exit(0)
+                        return main() #
                     selected_mods = choose_select({
                         mod:['No','Yes'] for mod in os.listdir('mods') if pathlib.Path(f'mods/{mod}').suffix == '.dscmod'
                     },title='Please, select the mods you want to import',return_index=True)
                     if selected_mods is None:
                         print('No mods are installed. Please, install at least one to continue.')
-                        input(f'{Effect.DIM}Press ENTER to exit...{Effect.OFF}')
-                        exit(0)
+                        return main() #
                     MODS = [MOD_PATH for MOD_PATH,v_ in selected_mods.items() if v_]
                     MOD_PATHFS = ['.'.join(MOD_PATH.split('.')[:-1]).split(' ')[0] for MOD_PATH in MODS]
                     if choose([
@@ -311,8 +397,7 @@ def main():
                         'Continue'
                     ],title='Are you sure you want to continue? These changes cannot be undone') == 'Abort':
                         print('Aborting...')
-                        input(f'{Effect.DIM}Press ENTER to exit...{Effect.OFF}')
-                        exit(0)
+                        return main() #
                     def try_create_folder(dir):
                         if not os.path.exists(dir):os.mkdir(dir)
                     
@@ -455,8 +540,9 @@ execute unless data storage descendant-atlas:version applied.{{UUID}} run data m
                         rename_()
                     
                     print(f'The mod was applied successfully.')
-                    print(f'{Color.YELLOW}WARNING: {Color.WHITE}The instalation isn\'t done yet! If you add another mod without finishing the instalation, your world may get corrupted. To finish de instalation just open the world in minecraft and check that the chat registers the changes.')
+                    print(f'{Color.YELLOW}WARNING: {Color.OFF}The instalation isn\'t done yet! If you add another mod without finishing the instalation, your world may get corrupted. To finish de instalation just open the world in minecraft and check that the chat registers the changes.')
                     input(f'{Effect.DIM}Press Enter to leave...{Effect.OFF}')
+            main()
         case 'Help':
             match choose([
                 'What is Atlas?',
@@ -519,4 +605,4 @@ if __name__ == '__main__':
         f'[dim](This project is not affiliated with Gerg or the Descendant+ team)[/dim]\nMade by: [blue][link=https://github.com/Mikequez12]Mikequez12[/link][/blue]'
     )
 
-    main()
+    main('\n\n')
