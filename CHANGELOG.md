@@ -69,36 +69,56 @@ Improved diagnostics and developer tools.
 
 # v1.7
 ### New features
-* Added a built-in Minecraft launcher (Beta).
-* Added an interactive configuration editor.
-* Added configurable Minecraft installation directory.
-* Added configurable Minecraft version.
-* Atlas now automatically creates a temporary game directory when launching Minecraft.
-* Downloaded worlds are automatically linked into the temporary launcher instance.
-* Added automatic configuration reset for first-time users.
+- Added a built-in Minecraft launcher (Beta).
+- Added an interactive configuration editor.
+- Added configurable Minecraft installation directory.
+- Added configurable Minecraft version.
+- Atlas now automatically creates a temporary game directory when launching Minecraft.
+- Downloaded worlds are automatically linked into the temporary launcher instance.
+- Added automatic configuration reset for first-time users.
 
 ### Improvements
-* Greatly improved release extraction.
-* Improved terminal interface rendering.
-* Improved configuration management.
-* Improved structure placement pipeline.
-* Improved resource pack importing.
-* Improved compatibility with different operating systems.
-* Improved progress and status messages throughout the application.
-* Better automatic detection of ANSI-capable terminals.
-* Added automatic Unicode fallback for legacy terminals.
+- Greatly improved release extraction.
+- Improved terminal interface rendering.
+- Improved configuration management.
+- Improved structure placement pipeline.
+- Improved resource pack importing.
+- Improved compatibility with different operating systems.
+- Improved progress and status messages throughout the application.
+- Better automatic detection of ANSI-capable terminals.
+- Added automatic Unicode fallback for legacy terminals.
 
 ### Internal changes
-* Refactored configuration handling.
-* Refactored terminal UI rendering.
-* Added portable ANSI fallback implementation.
-* Added portable Unicode fallback implementation.
-* Reworked menu system.
-* Simplified release download workflow.
-* Improved launcher integration architecture.
+- Refactored configuration handling.
+- Refactored terminal UI rendering.
+- Added portable ANSI fallback implementation.
+- Added portable Unicode fallback implementation.
+- Reworked menu system.
+- Simplified release download workflow.
+- Improved launcher integration architecture.
 
 ### Bug fixes
-* Fixed several extraction edge cases.
-* Fixed issues when importing releases containing nested ZIP files.
-* Fixed various terminal compatibility issues.
-* Fixed several file handling edge cases during import/export.
+- Fixed several extraction edge cases.
+- Fixed issues when importing releases containing nested ZIP files.
+- Fixed various terminal compatibility issues.
+- Fixed several file handling edge cases during import/export.
+
+# v1.8
+
+### New Features
+
+- Added Atlas-Extra (Early Access).
+- Atlas-Extra introduces cross-world progression transfer.
+
+### Improvements
+
+- Atlas-Extra utilities are now located in their own `atlas-extra/` directory.
+
+### Changes
+
+- Standalone `.exe` files are no longer published as release assets.
+- The executable is now distributed inside the project `.zip`, as Atlas expects to run from within its project directory.
+
+### Fixes
+
+- Various bug fixes and internal improvements.

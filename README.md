@@ -1,5 +1,5 @@
 # Descendant Atlas
-<sub>v1.7</sub>
+<sub>v1.8</sub>
 
 ![IMAGE](docs/screenshot.png)
 
@@ -17,22 +17,27 @@ Its goal is to provide a straightforward way to download official Descendant+ re
 
 Atlas also includes a lightweight Minecraft launcher capable of starting compatible installations without relying on the official launcher interface.
 
-## What's New in v1.7
+## What's New in v1.8
 
-### Built-in Minecraft launcher (Beta)
+### Atlas-Extra (Early Access)
 
-Atlas can now launch compatible Minecraft installations directly, creating an isolated game directory while reusing your existing launcher assets and versions.
+Atlas-Extra is now included as an experimental companion mod for Descendant Atlas.
 
-### Configuration system
+Its first major feature is a cross-world progression system capable of transferring player progress between Descendant+ worlds. Progress such as unlocked content, loot crates and other supported data can now be exported from one world and imported into another.
 
-A new interactive configuration editor makes it possible to configure your Minecraft directory and target version without manually editing configuration files.
+To transfer your progress:
+1. Import `atlas-extra.dscmod` to both worlds.
+2. Run `/function atlas-extra:save` in your old world.
+3. Execute `python atlas-extra/save.py` to move the saving data.
+4. Open the destination world and run `/function atlas-extra:load`.
+> [!INFO]
+> Loading a save file will not remove any additional progress you've already made in the destination world. For example, unlocks that weren't present in your old world will remain unlocked.
 
-### Better terminal compatibility
-
-Atlas now detects ANSI and Unicode support automatically and gracefully falls back when terminal features are unavailable, allowing it to run correctly on a much wider range of terminals.
+Atlas-Extra is currently in Early Access and may receive breaking changes in future updates.
 
 ### General improvements
 
+- Added the new `atlas-extra/` directory for Atlas-Extra tools and utilities.
 - Improved terminal interface.
 - Better cross-platform support.
 - Improved resource pack importing.
@@ -60,6 +65,7 @@ Rather than altering existing game content, Atlas only adds or patches the minim
 
 ## Features
 
+- Atlas-Extra (Early Access) with cross-world progression transfer.
 - Download official Descendant+ releases directly from GitHub.
 - Create portable `.dscmod` mod packages.
 - Import many mods at the same time.
@@ -76,7 +82,7 @@ Rather than altering existing game content, Atlas only adds or patches the minim
 ## Requirements
 
 - Python 3.10 or later (when running from source)
-- Git (when cloning the repository) or download `.zip` (not recommended)
+- Git (optional, when cloning the repository)
 
 ## Installation
 
@@ -84,7 +90,14 @@ Rather than altering existing game content, Atlas only adds or patches the minim
 
 #### Option 1 — Executable (Recommended)
 
-Download the latest `.exe` from the [Releases](https://github.com/Mikequez12/Descendant-Atlas/releases) page and run it.
+Download the repository using **Code → Download ZIP**, extract it, then run `DescendantAtlas.exe`.
+
+> [!IMPORTANT]
+> Starting with v1.8, standalone `.exe` files are no longer published in GitHub Releases.
+>
+> Atlas expects to run from within its project directory, and distributing only the executable caused compatibility issues on some systems.
+>
+> If you prefer using the executable, download the project .zip from the release and run the bundled .exe from inside the extracted project folder.
 
 > [!NOTE]
 > Windows SmartScreen may display a warning because Atlas is not code-signed. If you trust the release, click **More info** → **Run anyway**.
@@ -182,12 +195,20 @@ python3 main.py
 ---
 
 **Q: Why do I need to open the descendant world after modding it?**
-**A:** Atlas doesn't directly modify your in-game world when using the app, it just drops the resources and how to apply them. This is made for various reasons, but most importantly: it's easy to debug and way more safe. If you don't open the world and just add another installation, chances are the entire world gets erased, this is caused because when executing Atlas, it thinks it was installed, and gets glitched. This has not been 100% tested and your world can continue as normal after this happening. This practice is not recommended: please, launch the world after modding it.
+**A:** Atlas doesn't directly modify your in-game world when using the app, it just drops the resources and how to apply them. This is made for various reasons, but most importantly: it's easy to debug and much safer. If you don't open the world and just add another installation, chances are the entire world gets erased, this is caused because when executing Atlas, it thinks it was installed, and gets glitched. This has not been 100% tested and your world can continue as normal after this happening. This practice is not recommended: please, launch the world after modding it.
+
+---
+
+**Q: What is Atlas-Extra?**  
+**A:** Atlas-Extra is an experimental framework included with Descendant Atlas. It provides developers with a simpler and more consistent way to interact with Descendant+ data while also introducing optional features for players, including a cross-world progression system capable of transferring achievements, unlocked classes, items and other supported data between worlds.
 
 ## Project structure
 
 ```
+.mc/
+atlas-extra/
 downloads/
+docs/
 mods/
     .resourcepacks/
     *.dscmod

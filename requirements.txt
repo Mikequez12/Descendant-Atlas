@@ -1,3 +1,4 @@
 colorist==1.8.8
 requests==2.32.5
 rich==14.2.0
+nbtlib==2.0.4

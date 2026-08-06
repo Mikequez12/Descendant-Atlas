@@ -18,7 +18,7 @@ from utils import ansi_supported
 import atlas_launcher
 
 
-ATLAS_VERSION = 'v1.7'
+ATLAS_VERSION = 'v1.8'
 
 
 if not ansi_supported:
@@ -210,9 +210,12 @@ def reset_config():
             '.config-version':ATLAS_VERSION
         })
     print(f'{Color.YELLOW}WARNING: {Color.OFF}Your system config has been setted automaticaly, please check if the info is correct. {Effect.DIM}Especially in MacOS.{Effect.OFF}')
+    print()
 
 def main(init_text=''):
     print(init_text,end='')
+    if not os.path.exists('config.json'):
+        with open('config.json','w',encoding='utf-8') as file:file.write('{}')
     with open('config.json','r',encoding='utf-8') as file:
         CONFIG = json.load(file)
     
@@ -459,10 +462,17 @@ def main(init_text=''):
                     for I,MOD_PATH in enumerate(MODS):
                         MOD_PATHF = MOD_PATHFS[I]
                         try:
-                            resources_zip = zipfile.ZipFile(f"downloads/{DIR_NAME}/resources.zip", "a", compression=zipfile.ZIP_DEFLATED)
                             ress = os.listdir(f"mods/.temp/{MOD_PATHF}/resourcepacks")
-                        except:
+                        except FileNotFoundError:
                             ress = []
+
+                        if ress:
+                            resources_zip = zipfile.ZipFile(
+                                f"downloads/{DIR_NAME}/resources.zip",
+                                "a",
+                                compression=zipfile.ZIP_DEFLATED
+                            )
+                        else:
                             resources_zip = None
 
                         for resourcepack in ress:
