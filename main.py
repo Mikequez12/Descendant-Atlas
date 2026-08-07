@@ -222,7 +222,7 @@ def main(init_text=''):
     if CONFIG == {}:
         reset_config()
         
-    match choose(['Download','Mods',f'Launch Minecraft localy (BETA)','Config','Help','Quit'],title='Please, select an option'):
+    match choose(['Download','Mods',f'Launch Minecraft locally (BETA)','Config','Help','Quit'],title='Please, select an option'):
         case 'Quit':exit(0)
         case 'Config':
             match choose(
@@ -237,7 +237,7 @@ def main(init_text=''):
                 case 'Edit config':
                     config()
             main()
-        case 'Launch Minecraft localy (BETA)':
+        case 'Launch Minecraft locally (BETA)':
             # Thanks to sdfxf31 for the idea
             
             gd = CONFIG.get('minecraft-launcher-directory')
