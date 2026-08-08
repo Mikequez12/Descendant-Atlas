@@ -27,7 +27,7 @@ Its first major feature is a cross-world progression system capable of transferr
 
 To transfer your progress check out `USAGE.md`.
 
->[!INFO]
+>[!NOTE]
 >Loading a save does not remove additional progress already present in the destination world. For example, unlocks that were not present in the old world will remain unlocked.
 
 Atlas-Extra is currently in **Early Access** and may receive breaking changes in future updates.
