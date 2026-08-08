@@ -141,28 +141,8 @@ python3 -m pip install -r requirements.txt
 python3 main.py
 ```
 
-## Creating a mod
-
-1. Download a Descendant+ release.
-2. Create and save your changes using a `structure block`.
-3. Select **Mods → Export mod**.
-4. Choose:
-   - Datapacks
-   - Resource packs
-   - Structures
-5. Configure structure placement (optional).
-6. A `.dscmod` package will be created.
-
-## Applying a mod
-
-1. Select **Mods → Import mod**.
-2. Choose a downloaded Descendant+ release.
-3. Select a `.dscmod`.
-4. Descendant Atlas will:
-   - copy datapacks,
-   - merge resource packs,
-   - import structures,
-   - patch the required load functions.
+## Usage
+Check the [usage](./USAGE) file for detailed information on how to use Atlas and Atlas-Extra.
 
 ## FAQ
 
