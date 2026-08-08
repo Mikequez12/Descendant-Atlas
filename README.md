@@ -183,7 +183,7 @@ However, Atlas can download mod dependencies from URLs provided by their creator
 
 ---
 
-**Q: Why do I need to open the descendant world after modding it?**
+**Q: Why do I need to open the descendant world after modding it?**  
 **A:** Atlas does not finish applying a mod entirely when the import operation completes. Some changes are applied by the descendant-atlas datapack when the world is first loaded. If you import another mod before loading the world, both installations may interact before Atlas has finalized the previous one, which can cause conflicts or corrupt the installation.
 For this reason, always open the world once after importing mods before importing additional mods.
 
