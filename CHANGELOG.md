@@ -122,3 +122,34 @@ Improved diagnostics and developer tools.
 ### Fixes
 
 - Various bug fixes and internal improvements.
+
+# v1.9
+
+### New Features
+
+* Added mod dependency support.
+* Added SHA-256 dependency verification.
+* Dependencies can now be automatically added to the import queue.
+* Added support for downloading missing dependencies during mod installation.
+* Added dependency URLs when exporting mods.
+* Added support for dependency chains.
+
+### Atlas-Extra
+
+* Updated Atlas-Extra for the brand-new Descendant+ v3.5 release.
+* Solved major bugs that caused save files not to work as intended.
+* Added the example mod `progression.dscmod`: a simple mod that shows a message in the chat and makes a sound on character unlocks and achievements.
+
+### Improvements
+
+* Improved terminal interface.
+* Improved mod queue.
+
+### Changes
+
+* Dependency files now use SHA-256 hashes to identify mods independently of their filenames.
+* Atlas can now detect and queue dependencies while processing mods.
+
+### Fixes
+
+* Various bug fixes and internal improvements.

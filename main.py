@@ -12,25 +12,26 @@ import json
 import time
 import stat
 import uuid
+import hashlib
 
 from tui import choose, choose_select, custom_input, ask_config
 from utils import ansi_supported
 import atlas_launcher
 
 
-ATLAS_VERSION = 'v1.8'
+ATLAS_VERSION = 'v1.9'
 
 
 if not ansi_supported:
     print('ERROR: This terminal doesn\'t support ANSI codes. Atlas has a simple system that tries to get rid of ANSI by default.')
-    if input('Do you wanna enable it [Y/N]? ').upper() in ['YES','Y','1','ACCEPT','OK']:
+    if input('Do you want to enable it [Y/N]? ').upper() in ['YES','Y','1','ACCEPT','OK']:
         from utils import Color, Effect, Console
     else:
         print('Aborting...')
         exit(0)
 
 
-def request_release(t="Please, select a release"):
+def request_release(t="Please select a release"):
     releases = requests.get('https://api.github.com/repos/sdfxf31/Descendant-Plus/releases').json()
     r = [
         [
@@ -92,7 +93,7 @@ def download(release,root_path=lambda name:f'downloads/Descendant-{name}',alert=
     root_path = root_path(release["name"])
     if os.path.exists(root_path):
         if ask_overwrite:
-            if choose(['Yes','No'],title=f'The release {release["name"]} is already downloaded, do you want to overwrite it?') == 'No':
+            if choose(['Yes','No'],title=f'The release {release["name"]} has already been downloaded, do you want to overwrite it?') == 'No':
                 print('Aborting...')
                 return #
         os.chmod(root_path, stat.S_IWRITE)
@@ -209,7 +210,7 @@ def reset_config():
             'minecraft-version':'1.21.10',
             '.config-version':ATLAS_VERSION
         })
-    print(f'{Color.YELLOW}WARNING: {Color.OFF}Your system config has been setted automaticaly, please check if the info is correct. {Effect.DIM}Especially in MacOS.{Effect.OFF}')
+    print(f'{Color.YELLOW}WARNING: {Color.OFF}Your system config has been set automatically, please check if the info is correct. {Effect.DIM}Especially in MacOS.{Effect.OFF}')
     print()
 
 def main(init_text=''):
@@ -222,7 +223,7 @@ def main(init_text=''):
     if CONFIG == {}:
         reset_config()
         
-    match choose(['Download','Mods',f'Launch Minecraft locally (BETA)','Config','Help','Quit'],title='Please, select an option'):
+    match choose(['Download','Mods',f'Launch Minecraft locally (BETA)','Config','Help','Quit'],title='Please select an option'):
         case 'Quit':exit(0)
         case 'Config':
             match choose(
@@ -282,14 +283,14 @@ def main(init_text=''):
             match choose([
                 'Import mods',
                 'Export mod',
-            ], title='Please, select an option'):
+            ], title='Please select an option'):
                 case 'Export mod':
                     dir_name = choose([
                         _ for _ in os.listdir('downloads') if os.path.isdir(f'downloads/{_}') and _ != '.temp'
-                    ], title='Please, select a release')
+                    ], title='Please select a release')
 
                     if dir_name is None:
-                        print('No releases are installed. Please install at least one to continue.')
+                        print('No releases have been downloaded. Please install at least one to continue.')
                         return main() #
                     
                     MOD_NAME = custom_input(title='Select a name for the mod',accept=lambda _:_.strip() != '',error_msg='Invalid path')
@@ -332,11 +333,11 @@ def main(init_text=''):
                         if b:
                             shutil.copy(f'downloads/{dir_name}/generated/{n}/structure/{k}',f'mods/{MOD_NAME}/structures/{k}')
                     structure = None
-                    while structure != '\x1b[?9999hQuit...':
+                    while structure != '\x1b[?9999hContinue...':
                         structure = choose([
                             k for k,v in structures if v
-                        ] + ['\x1b[?9999hQuit...'], title='Select a structure to enter place mode')
-                        if structure != '\x1b[?9999hQuit...':
+                        ] + ['\x1b[?9999hContinue...'], title='Select a structure to enter place mode')
+                        if structure != '\x1b[?9999hContinue...':
                             try:
                                 parts = custom_input(
                                     f'Placing "{structure}"... Enter origin coords {Effect.DIM}<x> <y> <z>{Effect.OFF}',accept=lambda _:len(_.split()) == 3,error_msg='Enter exactly 3 coordinates.'
@@ -365,12 +366,41 @@ def main(init_text=''):
                                 print("Coordinates must be integers.")
                                 time.sleep(2)
                     
+                    DEPENDENCIES = []
+
+                    for d,v in choose_select(
+                        {
+                            _:['Not required','Required'] for _ in os.listdir('mods') if os.path.isfile(f'mods/{_}')
+                        },
+                        title="Select the dependencies",return_index=True
+                    ).items():
+                        if not v:continue
+                        print(f'Creating sha256 hash for "{d}"...',end=' ')
+                        with open(f"mods/{d}", "rb") as file:
+                            hashed = hashlib.sha256(file.read()).hexdigest()
+                        print('[DONE]')
+                        DEPENDENCIES.append({
+                            'name':d,
+                            'hash':hashed
+                        })
+                        url = custom_input(f'Download URL for dependency "{d}" {Effect.DIM}(Optional){Effect.OFF}')
+                        if url.replace(' ','') == '':url = None
+                        if url:
+                            print('Adding URL...',end=' ')
+                            DEPENDENCIES[-1]['url'] = url
+                            print('[DONE]')
+                        else:
+                            print('Skipping download URL...')
+                    
                     def zipdir(path, ziph):
                         for root, dirs, files in os.walk(path):
                             for file in files:
                                 ziph.write(os.path.join(root, file), 
                                         os.path.relpath(os.path.join(root, file), 
                                                         os.path.join(path, '..')))
+                                
+                    with open(f'mods/{MOD_NAME}/dependencies.json','w',encoding='utf-8') as file:
+                        json.dump(DEPENDENCIES,file)
 
                     with zipfile.ZipFile(f'mods/{MOD_NAME}.zip', 'w', zipfile.ZIP_DEFLATED) as zipf:
                         zipdir(f'mods/{MOD_NAME}', zipf)
@@ -383,18 +413,17 @@ def main(init_text=''):
                     TOTAL_CHANGES = {}
                     DIR_NAME = choose([
                         _ for _ in os.listdir('downloads') if os.path.isdir(f'downloads/{_}') and _ != '.temp'
-                    ], title='Please, select a release')
+                    ], title='Please select a release')
                     if DIR_NAME is None:
-                        print('No releases are installed. Please install at least one to continue.')
+                        print('No releases have been downloaded. Please install at least one to continue.')
                         return main() #
                     selected_mods = choose_select({
                         mod:['No','Yes'] for mod in os.listdir('mods') if pathlib.Path(f'mods/{mod}').suffix == '.dscmod'
-                    },title='Please, select the mods you want to import',return_index=True)
+                    },title='Please select the mods you want to import',return_index=True)
                     if selected_mods is None:
                         print('No mods are installed. Please, install at least one to continue.')
                         return main() #
                     MODS = [MOD_PATH for MOD_PATH,v_ in selected_mods.items() if v_]
-                    MOD_PATHFS = ['.'.join(MOD_PATH.split('.')[:-1]).split(' ')[0] for MOD_PATH in MODS]
                     if choose([
                         'Abort',
                         'Continue'
@@ -427,10 +456,65 @@ def main(init_text=''):
                     print('Importing mods:')
                     TOTAL_CHANGES['structures'] = []
                     TOTAL_CHANGES['datapacks'] = []
-                    for I,MOD_PATH in enumerate(MODS):
-                        MOD_PATHF = MOD_PATHFS[I]
+                    HASHES = {}
+                    for mod in os.listdir('mods'):
+                        if not os.path.isfile(f'mods/{mod}'):continue
+                        with open(f'mods/{mod}','rb') as file:
+                            HASHES[mod] = hashlib.sha256(file.read()).hexdigest()
+                    
+                    def handle_mod(I,MOD_PATH):
+                        MOD_PATHF = pathlib.Path(MOD_PATH).stem
                         with zipfile.ZipFile(f'mods/{MOD_PATH}', 'r') as zip_ref:
                             zip_ref.extractall(f'mods/.temp')
+                        if os.path.exists(f'mods/.temp/{MOD_PATHF}/dependencies.json'):
+                            with open(f'mods/.temp/{MOD_PATHF}/dependencies.json','r',encoding='utf-8') as file:
+                                DEPENDENCIES = json.load(file)
+                            print(f'{len(DEPENDENCIES)} dependencies found on "{MOD_PATH}".')
+                            for dep in DEPENDENCIES:
+                                if dep.get('hash',None) in HASHES.values():
+                                    dep_found = [k for k,v in HASHES.items() if dep.get('hash',None) == v]
+                                    already_handling = False
+                                    for _ in dep_found:
+                                        if _ in MODS:
+                                            already_handling = True
+                                    if dep.get("name") in dep_found:
+                                        dep_found_ = dep.get("name")
+                                    else:
+                                        dep_found_ = dep_found[0]
+                                    print(f'Found dependency "{dep.get("name")}" as "{dep_found_}".')
+                                    if already_handling:continue
+                                    print(f'Adding "{dep_found_}" to the mod queue...')
+                                    MODS.append(dep_found_)
+                                else:
+                                    if not dep.get("url",None):
+                                        if choose([
+                                            'Abort','Skip'
+                                        ],title=f'"{dep.get("name")}" mod was not found in your mods folder and no download url was found. Do you want to skip this dependency?') == 'Skip':continue
+                                        print('Aborting...')
+                                        return main()
+                                    c = choose([
+                                        'Abort','Continue','Install'
+                                    ],title=f'Found a dependency that you don\'t have in your mods folder: "{dep.get("name")}". Do you want to install it?',footer=f'{Effect.DIM}File URL: {dep.get("url","-")}{Effect.OFF}')
+                                    if c == 'Abort':
+                                        print('Aborting...')
+                                        return main()
+                                    if c == 'Continue':continue
+                                    if c == 'Install':
+                                        n = 0
+                                        t = lambda n:'' if n == 0 else f' ({n})'
+                                        while os.path.exists(dep.get('name')+t(n)):
+                                            print(f'"{dep.get("name")+t(n)}" already exists, changing name...')
+                                            n += 1
+                                        print(f'Writing as "{dep.get("name")+t(n)}"...',end=' ')
+                                        with open('mods/'+dep.get('name')+t(n),'wb') as file:
+                                            file.write(
+                                                requests.get(dep.get('url','')).content
+                                            )
+                                        print('[DONE]')
+                                        print('Adding to the mod queue')
+                                        MODS.append(dep.get('name')+t(n))
+                        else:
+                            print(f'No dependencies found on "{MOD_PATH}".')
                         try:structs = os.listdir(f'mods/.temp/{MOD_PATHF}/structures')
                         except:structs = []
                         for structure in structs:
@@ -453,14 +537,19 @@ def main(init_text=''):
                             TOTAL_CHANGES['datapacks'].append(f'{MOD_PATHF}/{datapack}')
                             try:
                                 shutil.move(f'mods/.temp/{MOD_PATHF}/datapacks/{datapack}',f'downloads/{DIR_NAME}/datapacks/{datapack}')
-                            except FileExistsError:
-                                print('[ERROR] File already exists')
+                            except (FileExistsError, shutil.Error):
+                                print(f'[ERROR] File already exists {Effect.DIM}(This means this mod was probably applied before or some mod tried to overwrite it){Effect.OFF}')
                             else:
                                 print('[DONE]')
                     
+                    I = 0
+                    while I < len(MODS):
+                        handle_mod(I,MODS[I])
+                        I += 1
+                    
                     TOTAL_CHANGES['resourcepacks'] = []
                     for I,MOD_PATH in enumerate(MODS):
-                        MOD_PATHF = MOD_PATHFS[I]
+                        MOD_PATHF = pathlib.Path(MOD_PATH).stem
                         try:
                             ress = os.listdir(f"mods/.temp/{MOD_PATHF}/resourcepacks")
                         except FileNotFoundError:
@@ -500,7 +589,8 @@ def main(init_text=''):
 
 
                     placing = []
-                    for MOD_PATHF in MOD_PATHFS:
+                    for MOD_PATH in MODS:
+                        MOD_PATHF = pathlib.Path(MOD_PATH).stem
                         try:
                             with open(f'mods/.temp/{MOD_PATHF}/placing.json','r',encoding='utf-8') as file:
                                 placing.append(json.load(file))
@@ -550,7 +640,7 @@ execute unless data storage descendant-atlas:version applied.{{UUID}} run data m
                         rename_()
                     
                     print(f'The mod was applied successfully.')
-                    print(f'{Color.YELLOW}WARNING: {Color.OFF}The instalation isn\'t done yet! If you add another mod without finishing the instalation, your world may get corrupted. To finish de instalation just open the world in minecraft and check that the chat registers the changes.')
+                    print(f'{Color.YELLOW}WARNING: {Color.OFF}The installation isn\'t done yet! If you add another mod without finishing the installation, your world may get corrupted. To finish de installation just open the world in minecraft and check that the chat registers the changes.')
                     input(f'{Effect.DIM}Press Enter to leave...{Effect.OFF}')
             main()
         case 'Help':
@@ -559,7 +649,7 @@ execute unless data storage descendant-atlas:version applied.{{UUID}} run data m
                 'Creating a mod',
                 'Applying a mod',
                 'About'
-            ], title='Please, select an option'):
+            ], title='Please select an option'):
                 case 'What is Atlas?':
                     print(f'''╭─╴\n│ {Effect.BOLD+Color.GREEN}What is Descendant Atlas?{Effect.OFF}
 │ Descendant Atlas is a tool for creating and applying

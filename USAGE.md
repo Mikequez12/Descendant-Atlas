@@ -41,59 +41,108 @@ python3 main.py
 
 #### Download Descendant+ releases
 
-* First execute Atlas.
-* Then select the **Download** option and press **Enter**.
-* Select the release you want and press **Enter** again.
-* Wait until the download is complete.
+1. First execute Atlas.
+2. Then select the **Download** option and press **Enter**.
+3. Select the release you want and press **Enter** again.
+4. Wait until the download is complete.
+
 
 #### Apply mods
+1. Execute Atlas.
+2. Select **Mods**.
+3. Select **Import mods**.
+4. Select the Descendant+ release.
+5. Select the `.dscmod` files you want to install.
+6. Confirm the installation.
+7. Wait until Atlas finishes.
 
-* First execute Atlas.
-* Then select the **Mods** option and press **Enter**.
-* Next select **Import mods** and press **Enter**.
-* Select your release and the mods you want to use.
-* Wait until the import is complete.
+Atlas automatically imports the mod's:
+
+* Datapacks
+* Structures
+* Resource packs
+* Dependencies
+
+If a selected mod has a dependency that is not installed, Atlas will ask whether you want to:
+
+* **Abort** the installation.
+* **Continue** without installing the dependency.
+* **Install** the missing dependency.
+
+If the dependency provides a download URL, Atlas can download it automatically.
+
 >[!IMPORTANT]
->Launch the Minecraft world after applying mods before importing additional ones.
+>Launch the Minecraft world after applying mods before importing additional mods. Atlas needs the world to be opened once to finish applying the installation.
 
 #### Export mods
+1. Execute Atlas.
+2. Select **Mods**.
+3. Select **Export mod**.
+4. Select the world containing your modifications.
+5. Enter a name for the mod.
+6. Select the datapacks to include.
+7. Select the resource packs to include.
+8. Select the structures to include.
+9. Optionally configure automatic structure placement.
+10. Select the **dependencies** of your mod.
+11. Optionally provide a download URL for each dependency.
+12. Finish the export.
 
-* First execute Atlas.
-* Then select the **Mods** option and press **Enter**.
-* Next select **Export mod** and press **Enter**.
-* Select the world containing your modifications.
-* Select the datapacks, resource packs, and structures that will be included in the mod.
-* If a structure should be placed automatically:
-    * Select it under `Place mode`.
-    * Enter the coordinates where the structure should be placed.
-    * Optionally enter a custom dimension. Leave it blank to use the Overworld.
-    >[!NOTE]
-    >These are the coordinates where the structure will be generated, **not** the position of the Structure Block used to create it.
-* Select **Quit...** and press **Enter**.
-* Wait until Atlas finishes exporting the mod.
-* Your mod will be in the `mods` folder.
+The resulting `.dscmod` file will be placed in the mods directory.
+
+##### Dependencies
+
+When exporting a mod, Atlas can create a dependency list for other `.dscmod` files.
+
+Each dependency is identified by its SHA-256 hash, rather than only its filename. This allows Atlas to recognize a dependency even if it has been renamed.
+
+A dependency can also have an optional download URL. This allows Atlas to retrieve the dependency automatically when another user imports the mod.
+
+##### Automatic structure placement
+
+If a structure should be placed automatically:
+
+1. Select the structure under Place mode.
+2. Enter its X, Y and Z coordinates.
+3. Optionally enter a dimension.
+4. Leave the dimension empty to use `minecraft:overworld`.
+5. Continue when all structures have been configured.
+
+>[!NOTE]
+>The coordinates refer to the position where the structure itself will be generated, not the position of the Structure Block used to create it.
 
 #### Launch Minecraft locally (BETA)
 
 >[!WARNING]
 >This is an experimental feature that is being tested and may not work. Please use it with caution.
 
-* First execute Atlas.
-* Then select the **Launch Minecraft locally (BETA)** option.
-* Wait for Minecraft to launch.
-* A temporary Minecraft instance will be launched on the `.mc` folder.
-* The `downloads` folder will be used as the Minecraft saves directory to make testing faster.
+1. Execute Atlas.
+2. Then select the **Launch Minecraft locally (BETA)** option.
+3. Wait for Minecraft to launch.
+
+Atlas creates a temporary Minecraft instance using the `.mc` directory.
+The `downloads` directory is linked as the Minecraft `saves` directory, allowing downloaded releases to be tested without manually copying them.
 
 #### Config
 
-* First execute Atlas.
-* Then select the **Config** option.
-* Select **Reset config** if you want to restore the default configuration for your platform.
-* Select **Edit config** if you want to modify the config of Atlas.
-    * Select a property and then press **Right** to edit it.
-    * To finish editing it, press **Enter**.
-    * To save your changes and leave, press **Enter** again.
-    * To show or hide hidden settings, press `.`.
+1. Execute Atlas.
+2. Select **Config**.
+3. Select one of the available options.
+
+##### Reset config
+
+**Reset config** restores the default configuration for your platform.
+
+##### Edit config
+
+**Edit config** allows individual configuration values to be changed.
+
+* Select a property.
+* Press **Right** to edit it.
+* Press **Enter** to finish editing.
+* Press **Enter** again to save the configuration.
+* Press `.` to show or hide hidden settings.
+
 >[!WARNING]
 >If you're a **MacOS** user, please check the configuration is appropriate for your system.
 
@@ -115,10 +164,10 @@ Then launch the world and run:
 ```
 
 >If you also want to save your storage (items, loot crates, etc.):
->* Go to the storage in the class selector.
->* Locate the structure block.
->* Open its interface.
->* Press **Save** manually.
+>1. Go to the storage in the class selector.
+>2. Locate the structure block.
+>3. Open its interface.
+>4. Press **Save** manually.
 
 This will save your data in a `.nbt` file.
 

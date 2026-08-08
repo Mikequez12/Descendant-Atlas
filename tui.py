@@ -119,16 +119,19 @@ def _read_key():
         finally:
             termios.tcsetattr(fd, termios.TCSADRAIN, old)
 
-def cls(n=None,w=None,k=False):
+def cls(n=None,w=None,k=None,r=lambda t:print(t,end='')):
     if ansi_supported:
-        if n is not None:print(f"\x1b[{n}F", end="")
-        if w is not None:print(f"\x1b[{w}G", end="")
-        if k:print('\x1b[J',end='')
+        t = ''
+        if n is not None:t += f"\x1b[{n}F"
+        if w is not None:t += f"\x1b[{w}G"
+        if k is not None:t += '\x1b[J'
+        return r(t)
     else:
         if os.name == "nt":
             os.system('cls')
         else:
             os.system('clear')
+        return ''
 
 def choose(
     options,
@@ -136,6 +139,7 @@ def choose(
     title='',
     pointer=f"{_default_pointer} {Effect.REVERSE}",
     header=None,
+    footer='',
     clear=True,
     wrap=True,
     pad='  ',
@@ -206,7 +210,7 @@ def choose(
             if (len(ANSI_RE.sub("", t)) > cols):
                 t = ansi_truncate(t, cols - 1)
             print(t)
-        print('╰╴')
+        print(f'╰╴{footer}')
 
     while True:
         render(index,False)
@@ -312,9 +316,9 @@ def choose_select(
             spacing = spacing_ - len(ANSI_RE.sub("", option))
             if i == index:
                 italic = "\x1b[3m" if last else ""
-                t = f'│{(on_select_pointer if last else pointer)+italic} {option} {" "*spacing} {rev_ch_pointer} {value} {ch_pointer} {Effect.OFF} '
+                t = f'│{(on_select_pointer if last else pointer)+italic} {option} {" "*spacing} {rev_ch_pointer} {value} {ch_pointer} {Effect.OFF}{cls(None,None,0,r=lambda o:o)}'
             else:
-                t = f'│{pad} {option} {" "*spacing} {rev_ch_pointer} {value} {ch_pointer} {Effect.OFF} '
+                t = f'│{pad} {option} {" "*spacing} {rev_ch_pointer} {value} {ch_pointer} {Effect.OFF}{cls(None,None,0,r=lambda o:o)}'
 
             if (len(ANSI_RE.sub("", t)) > cols):
                 t = ansi_truncate(t, cols - 1)
