@@ -53,8 +53,8 @@ When importing a mod:
 * Added SHA-256 dependency verification.
 * Various bug fixes and internal improvements.
 
-> [!WARNING]
-> After importing mods, open the modified world in Minecraft before importing additional mods. Atlas applies part of the installation when the world is first loaded, and importing another mod before that process has completed may corrupt the installation.
+>[!WARNING]
+>After importing mods, open the modified world in Minecraft before importing additional mods. Atlas applies part of the installation when the world is first loaded, and importing another mod before that process has completed may corrupt the installation.
 
 ## About
 
@@ -99,15 +99,15 @@ Rather than altering existing game content, Atlas only adds or patches the minim
 
 Download the repository using **Code → Download ZIP**, extract it, then run `DescendantAtlas.exe`.
 
-> [!IMPORTANT]
-> Starting with v1.8, standalone `.exe` files are no longer published in GitHub Releases.
+>[!IMPORTANT]
+>Starting with v1.8, standalone `.exe` files are no longer published in GitHub Releases.
 >
-> Atlas expects to run from within its project directory, and distributing only the executable caused compatibility issues on some systems.
+>Atlas expects to run from within its project directory, and distributing only the executable caused compatibility issues on some systems.
 >
-> If you prefer using the executable, download the project .zip from the release and run the bundled .exe from inside the extracted project folder.
+>If you prefer using the executable, download the project .zip from the release and run the bundled .exe from inside the extracted project folder.
 
-> [!NOTE]
-> Windows SmartScreen may display a warning because Atlas is not code-signed. If you trust the release, click **More info** → **Run anyway**.
+>[!NOTE]
+>Windows SmartScreen may display a warning because Atlas is not code-signed. If you trust the release, click **More info** → **Run anyway**.
 
 #### Option 2 — From source
 
@@ -205,8 +205,8 @@ mods/
 ```
 
 ## Before you start
-> [!CAUTION]
-> This project is still experimental. Please make a backup before importing any files. Better safe than sorry.
+>[!CAUTION]
+>This project is still experimental. Please make a backup before importing any files. Better safe than sorry.
 
-> [!CAUTION]
-> Installing multiple modpacks without loading the world in between will cause issues: After every installation you need to run the world to finish the installing process.
+>[!CAUTION]
+>Installing multiple modpacks without loading the world in between will cause issues: After every installation you need to run the world to finish the installing process.
