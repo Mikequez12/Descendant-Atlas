@@ -142,7 +142,7 @@ python3 main.py
 ```
 
 ## Usage
-Check the [usage](./USAGE) file for detailed information on how to use Atlas and Atlas-Extra.
+Check the [usage](./USAGE.md) file for detailed information on how to use Atlas and Atlas-Extra.
 
 ## FAQ
 
