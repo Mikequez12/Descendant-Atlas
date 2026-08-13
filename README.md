@@ -33,6 +33,9 @@ Current supported data includes:
 - Items
 - Other supported progression data
 
+>[!NOTE]
+>Loading a save does not remove additional progress already present in the destination world. For example, unlocks that were not present in the old world will remain unlocked.
+
 Atlas-Extra releases:
 
 | Release | Compatible Descendant+ versions |
