@@ -1,9 +1,7 @@
 import os
 import sys
 import re
-
-from colorist import Effect, Color
-
+import json
 
 if os.name == "nt":
     import msvcrt
@@ -16,13 +14,21 @@ from utils import unicode_supported, ansi_supported
 _default_pointer = '❯'
 _default_pointer_rev = '❮'
 
-if not unicode_supported:
-    print('ERROR: This terminal doesn\'t support UNICODE codes. Atlas has a simple system that tries to get rid of UNICODE by default.')
-    if input('Do you wanna enable it [Y/N]? ').upper() not in ['YES','Y','1','ACCEPT','OK']:
-        print('Aborting...')
-        exit(0)
+with open('config.json','r',encoding='utf-8') as file:
+    CONFIG = json.load(file)
 
-if not unicode_supported:
+if (not ansi_supported) or CONFIG.get('.ansi-ldm',False):
+    from utils import Color, Effect, Console
+else:
+    from colorist import Effect, Color
+    Effect.italic = "\x1b[3m"
+
+if (not unicode_supported) or CONFIG.get('.unicode-ldm',False):
+    if not CONFIG.get('.unicode-ldm',False):
+        print('ERROR: This terminal doesn\'t support UNICODE codes. Atlas has a simple system that tries to get rid of UNICODE by default.')
+        if input('Do you wanna enable it [Y/N]? ').upper() not in ['YES','Y','1','ACCEPT','OK']:
+            print('Aborting...')
+            exit(0)
     import sys
 
     class ASCIIStdout:
@@ -120,13 +126,15 @@ def _read_key():
             termios.tcsetattr(fd, termios.TCSADRAIN, old)
 
 def cls(n=None,w=None,k=None,r=lambda t:print(t,end='')):
-    if ansi_supported:
+    if not ((not ansi_supported) or CONFIG.get('.ansi-ldm',False)):
         t = ''
         if n is not None:t += f"\x1b[{n}F"
         if w is not None:t += f"\x1b[{w}G"
         if k is not None:t += '\x1b[J'
         return r(t)
     else:
+        if r != cls.__defaults__[3]:
+            return ' '*5
         if os.name == "nt":
             os.system('cls')
         else:
@@ -202,7 +210,7 @@ def choose(
             print(t)
         for i, option in enumerate(options):
             if i == index:
-                italic = "\x1b[3m" if last else ""
+                italic = Effect.italic if last else ""
                 t = f'│{(on_select_pointer if last else pointer)+italic} {option} {Effect.OFF}'
             else:
                 t = f'│{pad} {option} {Effect.OFF}'
@@ -315,7 +323,7 @@ def choose_select(
             value = value[index_values[option]] 
             spacing = spacing_ - len(ANSI_RE.sub("", option))
             if i == index:
-                italic = "\x1b[3m" if last else ""
+                italic = Effect.italic if last else ""
                 t = f'│{(on_select_pointer if last else pointer)+italic} {option} {" "*spacing} {rev_ch_pointer} {value} {ch_pointer} {Effect.OFF}{cls(None,None,0,r=lambda o:o)}'
             else:
                 t = f'│{pad} {option} {" "*spacing} {rev_ch_pointer} {value} {ch_pointer} {Effect.OFF}{cls(None,None,0,r=lambda o:o)}'
@@ -396,7 +404,7 @@ def progress(value, total=100, *, width=None, prefix="", suffix="", end_cmd='\n'
 def custom_input(title,prefix=f'{_default_pointer} ',accept=lambda _:True,error_msg='Invalid value',error_format=Color.RED,_as_error=False):
     cols,rows = os.get_terminal_size()
 
-    italic = "\x1b[3m"
+    italic = Effect.italic
 
     print(f'╭╴{title+(f' {error_format}{italic+error_msg+Effect.OFF}' if _as_error else '')}')
     print('')
@@ -422,13 +430,18 @@ def ask_config(
     default_config={
         'minecraft-launcher-directory':str,
         'minecraft-version':str,
-        '.config-version':str
+        '.config-version':str,
+        '.ansi-ldm':bool,
+        '.unicode-ldm':bool
     },config_values:dict=None,
     title='Config',
     pointer=f"{_default_pointer} {Effect.REVERSE}",
+    on_select_pointer=f" {_default_pointer}{Effect.REVERSE}",
     clear=True,
     wrap=True,
-    pad='  '
+    pad='  ',
+    ch_pointer=_default_pointer,
+    rev_ch_pointer=_default_pointer_rev
 ):
     index = 0
 
@@ -453,8 +466,38 @@ def ask_config(
 
     DEBUG = False
 
+    def handle_input(key,index,default_config):
+        """
+        config_values[list(config.keys())[index]] += 1
+        config_values[list(config.keys())[index]] %= len(list(config.values())[index])
+        """
+        n = len(vis_config)-index+1
+        _ = list(config.keys())[index]
+        match default_config[_]:
+            case t if t is str:
+                if key == 'LEFT':return
+                if clear:cls(n,spacing_+len(ANSI_RE.sub("",pointer))+7)
+                if config[_] is None:config[_] = 'unset'
+                i = len(config[_])
+                print('\x1b[0K',end=Effect.REVERSE+' '*i)
+                if clear:cls(None,spacing_ + 9)
+                new_value = input()
+                if clear:cls(index+1,spacing_ + len(new_value) + 9,k=True)
+                if new_value == '' and _ not in default_config.keys():
+                    del config[_]
+                    vis_config.pop(0)
+                    index -= 1
+                    if index < 0:
+                        index = len(vis_config) - 1
+                else:
+                    config[_] = new_value
+                print(Effect.OFF+'\n'*len(vis_config))
+                # m = index + 4 - len(config)
+            case t if t is bool:
+                config[_] = not config[_]
+
     def render(index,last,DEBUG,avoid_cls=False):
-        italic = "\x1b[3m"
+        italic = Effect.italic
 
         add = len([k for k in config if DEBUG or k[0] != '.']) + 2
 
@@ -463,8 +506,12 @@ def ask_config(
         for i,(k,v) in enumerate(config.items()):
             if k[0] == '.' and not DEBUG:continue
             if v is None: v = f'{Effect.DIM+italic}unset{Effect.DIM}'
+            if type(v) == bool:
+                v = 'Yes' if v else 'No'
+                if i == index:
+                    v = f'{rev_ch_pointer} {v} {ch_pointer}'
             spacing = spacing_ - len(ANSI_RE.sub("", k))
-            print(f'│  {pointer if i == index else pad} {italic if last and i == index else ""}{Effect.DIM if k[0] == "." else ""}{k} {" " * spacing} {v} {Effect.OFF}')
+            print(f'│{(pointer if not last else on_select_pointer) if i == index else pad} {italic if last and i == index else ""}{Effect.DIM if k[0] == "." else ""}{k} {" " * spacing} {v} {Effect.OFF+cls(k=0,r=lambda _:_)}')
         print('╰╴')
 
     while True:
@@ -486,34 +533,9 @@ def ask_config(
             elif index < len(vis_config) - 1:
                 return 1
         elif key == "RIGHT":
-            """
-            config_values[list(config.keys())[index]] += 1
-            config_values[list(config.keys())[index]] %= len(list(config.values())[index])
-            """
-            n = len(vis_config)-index+1
-            _ = list(config.keys())[index]
-            if clear:cls(n,spacing_+len(ANSI_RE.sub("",pointer))+7)
-            if config[_] is None:config[_] = 'unset'
-            i = len(config[_])
-            print('\x1b[0K',end=Effect.REVERSE+' '*i)
-            if clear:cls(None,spacing_ + 9)
-            new_value = input()
-            if clear:cls(index+1,spacing_ + len(new_value) + 9,k=True)
-            if new_value == '' and _ not in default_config.keys():
-                del config[_]
-                vis_config.pop(0)
-                index -= 1
-                if index < 0:
-                    index = len(vis_config) - 1
-            else:
-                config[_] = new_value
-            print(Effect.OFF+'\n'*len(vis_config))
-            m = index + 4 - len(config)
+            handle_input('RIGHT',index,default_config)
         elif key == "LEFT":
-            config_values[list(config.keys())[index]] -= 1
-            if config_values[list(config.keys())[index]] == -1:
-                config_values[list(config.keys())[index]] = len(list(config.values())[index]) - 1
-            render(index,False,DEBUG)
+            handle_input('LEFT',index,default_config)
         elif key == ".":
             add = len([k for k in config if DEBUG and k[0] == '.']) + 4
             if clear:cls(add,k=True)

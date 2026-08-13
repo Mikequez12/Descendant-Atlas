@@ -14,22 +14,29 @@ import stat
 import uuid
 import hashlib
 
-from tui import choose, choose_select, custom_input, ask_config
 from utils import ansi_supported
 import atlas_launcher
 
 
-ATLAS_VERSION = 'v1.9'
+ATLAS_VERSION = 'v2.0'
 
 
-if not ansi_supported:
-    print('ERROR: This terminal doesn\'t support ANSI codes. Atlas has a simple system that tries to get rid of ANSI by default.')
-    if input('Do you want to enable it [Y/N]? ').upper() in ['YES','Y','1','ACCEPT','OK']:
-        from utils import Color, Effect, Console
+with open('config.json','r',encoding='utf-8') as file:
+    CONFIG = json.load(file)
+
+
+if (not ansi_supported) or CONFIG.get('.ansi-ldm',False):
+    if not CONFIG.get('.ansi-ldm',False):
+        print('ERROR: This terminal doesn\'t support ANSI codes. Atlas has a simple system that tries to get rid of ANSI by default.')
+        if input('Do you want to enable it [Y/N]? ').upper() in ['YES','Y','1','ACCEPT','OK']:
+            from utils import Color, Effect, Console
+        else:
+            print('Aborting...')
+            exit(0)
     else:
-        print('Aborting...')
-        exit(0)
+        from utils import Color, Effect, Console
 
+from tui import choose, choose_select, custom_input, ask_config
 
 def request_release(t="Please select a release"):
     releases = requests.get('https://api.github.com/repos/sdfxf31/Descendant-Plus/releases').json()
@@ -185,6 +192,22 @@ def config(default_config:dict=None) -> dict:
     with open('config.json','w',encoding='utf-8') as file:
         json.dump(CONFIG,file)
 
+def get_mod_root(MOD_PATH):
+    with zipfile.ZipFile(f"mods/{MOD_PATH}") as z:
+        names = [n for n in z.namelist() if n.strip("/")]
+
+        roots = {
+            n.split("/", 1)[0]
+            for n in names
+            if "/" in n
+        }
+
+        if len(roots) == 1:
+            root = roots.pop()
+        else:
+            root = None
+
+    return root
 
 
 
@@ -200,15 +223,27 @@ def config(default_config:dict=None) -> dict:
 def reset_config():
     if os.name == "nt":
         config({
-            'minecraft-launcher-directory':r'%appdata%\.minecraft',
-            'minecraft-version':'1.21.10',
-            '.config-version':ATLAS_VERSION
+            'minecraft-launcher-directory': r'%appdata%\.minecraft',
+            'minecraft-version': '1.21.10',
+            '.config-version': ATLAS_VERSION,
+            '.ansi-ldm':False,
+            '.unicode-ldm':False
         })
-    else:
-        config(config_values={
-            'minecraft-launcher-directory':r'~/.minecraft',
-            'minecraft-version':'1.21.10',
-            '.config-version':ATLAS_VERSION
+    elif sys.platform == "darwin":
+        config({
+            'minecraft-launcher-directory': '~/Library/Application Support/minecraft',
+            'minecraft-version': '1.21.10',
+            '.config-version': ATLAS_VERSION,
+            '.ansi-ldm':False,
+            '.unicode-ldm':False
+        })
+    else:  # Linux
+        config({
+            'minecraft-launcher-directory': '~/.minecraft',
+            'minecraft-version': '1.21.10',
+            '.config-version': ATLAS_VERSION,
+            '.ansi-ldm':False,
+            '.unicode-ldm':False
         })
     print(f'{Color.YELLOW}WARNING: {Color.OFF}Your system config has been set automatically, please check if the info is correct. {Effect.DIM}Especially in MacOS.{Effect.OFF}')
     print()
@@ -217,8 +252,6 @@ def main(init_text=''):
     print(init_text,end='')
     if not os.path.exists('config.json'):
         with open('config.json','w',encoding='utf-8') as file:file.write('{}')
-    with open('config.json','r',encoding='utf-8') as file:
-        CONFIG = json.load(file)
     
     if CONFIG == {}:
         reset_config()
@@ -463,7 +496,8 @@ def main(init_text=''):
                             HASHES[mod] = hashlib.sha256(file.read()).hexdigest()
                     
                     def handle_mod(I,MOD_PATH):
-                        MOD_PATHF = pathlib.Path(MOD_PATH).stem
+                        MOD_PATHF = get_mod_root(MOD_PATH)
+                        print(f'(i) {MOD_PATH}: Found root: "{MOD_PATHF}"')
                         with zipfile.ZipFile(f'mods/{MOD_PATH}', 'r') as zip_ref:
                             zip_ref.extractall(f'mods/.temp')
                         if os.path.exists(f'mods/.temp/{MOD_PATHF}/dependencies.json'):
@@ -516,7 +550,9 @@ def main(init_text=''):
                         else:
                             print(f'No dependencies found on "{MOD_PATH}".')
                         try:structs = os.listdir(f'mods/.temp/{MOD_PATHF}/structures')
-                        except:structs = []
+                        except:
+                            print('(*) Couldn\'t extract structures')
+                            structs = []
                         for structure in structs:
                             if os.path.isdir(f'mods/.temp/{MOD_PATHF}/structures/{structure}'):continue
                             print(f'    Importing structure "{structure}"... ',end='')
@@ -530,7 +566,9 @@ def main(init_text=''):
                                 print('[DONE]')
                         
                         try:dataps = os.listdir(f'mods/.temp/{MOD_PATHF}/datapacks')
-                        except:dataps = []
+                        except:
+                            print('(*) Couldn\'t extract datapacks')
+                            dataps = []
                         for datapack in dataps:
                             if os.path.isfile(f'mods/.temp/{MOD_PATHF}/datapacks/{datapack}'):continue
                             print(f'    Importing datapack "{datapack}"... ',end='')
@@ -549,10 +587,11 @@ def main(init_text=''):
                     
                     TOTAL_CHANGES['resourcepacks'] = []
                     for I,MOD_PATH in enumerate(MODS):
-                        MOD_PATHF = pathlib.Path(MOD_PATH).stem
+                        MOD_PATHF = get_mod_root(MOD_PATH)
                         try:
                             ress = os.listdir(f"mods/.temp/{MOD_PATHF}/resourcepacks")
                         except FileNotFoundError:
+                            print('(*) Couldn\'t extract resource packs')
                             ress = []
 
                         if ress:
@@ -590,7 +629,7 @@ def main(init_text=''):
 
                     placing = []
                     for MOD_PATH in MODS:
-                        MOD_PATHF = pathlib.Path(MOD_PATH).stem
+                        MOD_PATHF = get_mod_root(MOD_PATH)
                         try:
                             with open(f'mods/.temp/{MOD_PATHF}/placing.json','r',encoding='utf-8') as file:
                                 placing.append(json.load(file))
@@ -630,7 +669,10 @@ execute unless data storage descendant-atlas:version applied.{{UUID}} run data m
                     except Exception as err:print(f' [DONE*]')
                     else:print(' [DONE]')
 
-                    shutil.rmtree(f'mods/.temp/'+MOD_PATHF)
+                    for p in os.listdir('mods/.temp'):
+                        if os.path.isdir(p):
+                            print(f'(i) Deleting "{p}"')
+                            shutil.rmtree(f'mods/.temp/'+p)
 
                     def rename_(n=0):
                         try:os.rename(f'downloads/{DIR_NAME}',f'downloads/{DIR_NAME} (modded){"" if n == 0 else f" ({n})"}')
@@ -641,7 +683,6 @@ execute unless data storage descendant-atlas:version applied.{{UUID}} run data m
                     
                     print(f'The mod was applied successfully.')
                     print(f'{Color.YELLOW}WARNING: {Color.OFF}The installation isn\'t done yet! If you add another mod without finishing the installation, your world may get corrupted. To finish de installation just open the world in minecraft and check that the chat registers the changes.')
-                    input(f'{Effect.DIM}Press Enter to leave...{Effect.OFF}')
             main()
         case 'Help':
             match choose([

@@ -1,5 +1,5 @@
 # Descendant Atlas
-<sub>v1.9</sub>
+<sub>v2.0</sub>
 
 ![IMAGE](docs/screenshot.png)
 
@@ -17,44 +17,39 @@ Its goal is to provide a straightforward way to download official Descendant+ re
 
 Atlas also includes a lightweight Minecraft launcher capable of starting compatible installations without relying on the official launcher interface.
 
-## What's New in v1.9
+## What's New in v2.0
 
-### Atlas-Extra (Early Access)
+### Atlas-Extra
 
-Atlas-Extra is now included as an experimental companion tool for Descendant Atlas.
+Atlas-Extra is now included as an experimental companion framework for Descendant Atlas.
 
-Its first major feature is a cross-world progression system capable of transferring supported player progress between Descendant+ worlds. This includes progression such as unlocked content, loot crates, and other supported data.
+It provides a simplified API for Descendant+ data and introduces optional player-facing features such as cross-world progression transfer.
 
-To transfer your progress check out `USAGE.md`.
+Current supported data includes:
 
-> [!INFO]
-> Loading a save does not remove additional progress already present in the destination world. For example, unlocks that were not present in the old world will remain unlocked.
+- Unlocked classes
+- Achievements
+- Loot crates
+- Items
+- Other supported progression data
 
-Atlas-Extra is currently in **Early Access** and may receive breaking changes in future updates.
+Atlas-Extra releases:
 
-### Mod dependencies
+| Release | Compatible Descendant+ versions |
+|----------|-------------------------------|
+| R1 | 0.0 – 3.5 |
+| R2 | 3.6+ |
 
-Atlas now supports declaring dependencies between `.dscmod` files.
-
-When creating a mod, you can select other mods as dependencies and optionally provide a download URL for each one. Atlas verifies dependencies using **SHA-256 hashes**, allowing dependencies to be identified even when their filenames differ.
-
-When importing a mod:
-
-* Existing dependencies are detected automatically.
-* Missing dependencies can be skipped, installed, or cause the import to be aborted.
-* Dependencies installed during the import are automatically added to the import queue.
-* Dependency chains are supported, allowing a dependency to have dependencies of its own.
+>[!WARNING]
+>Atlas-Extra remains in Early Access and may receive breaking changes in future releases.
 
 ### General improvements
 
-* Improved the terminal interface.
-* Added support for releases with multiple downloadable assets.
-* Improved mod dependency handling.
-* Added SHA-256 dependency verification.
-* Various bug fixes and internal improvements.
+* Better configuration
+* Upgraded configuration for MacOS
 
-> [!WARNING]
-> After importing mods, open the modified world in Minecraft before importing additional mods. Atlas applies part of the installation when the world is first loaded, and importing another mod before that process has completed may corrupt the installation.
+>[!WARNING]
+>After importing mods, open the modified world in Minecraft before importing additional mods. Atlas applies part of the installation when the world is first loaded, and importing another mod before that process has completed may corrupt the installation.
 
 ## About
 
@@ -99,15 +94,15 @@ Rather than altering existing game content, Atlas only adds or patches the minim
 
 Download the repository using **Code → Download ZIP**, extract it, then run `DescendantAtlas.exe`.
 
-> [!IMPORTANT]
-> Starting with v1.8, standalone `.exe` files are no longer published in GitHub Releases.
+>[!IMPORTANT]
+>Starting with v1.8, standalone `.exe` files are no longer published in GitHub Releases.
 >
-> Atlas expects to run from within its project directory, and distributing only the executable caused compatibility issues on some systems.
+>Atlas expects to run from within its project directory, and distributing only the executable caused compatibility issues on some systems.
 >
-> If you prefer using the executable, download the project .zip from the release and run the bundled .exe from inside the extracted project folder.
+>If you prefer using the executable, download the project .zip from the release and run the bundled .exe from inside the extracted project folder.
 
-> [!NOTE]
-> Windows SmartScreen may display a warning because Atlas is not code-signed. If you trust the release, click **More info** → **Run anyway**.
+>[!NOTE]
+>Windows SmartScreen may display a warning because Atlas is not code-signed. If you trust the release, click **More info** → **Run anyway**.
 
 #### Option 2 — From source
 
@@ -141,28 +136,8 @@ python3 -m pip install -r requirements.txt
 python3 main.py
 ```
 
-## Creating a mod
-
-1. Download a Descendant+ release.
-2. Create and save your changes using a `structure block`.
-3. Select **Mods → Export mod**.
-4. Choose:
-   - Datapacks
-   - Resource packs
-   - Structures
-5. Configure structure placement (optional).
-6. A `.dscmod` package will be created.
-
-## Applying a mod
-
-1. Select **Mods → Import mod**.
-2. Choose a downloaded Descendant+ release.
-3. Select a `.dscmod`.
-4. Descendant Atlas will:
-   - copy datapacks,
-   - merge resource packs,
-   - import structures,
-   - patch the required load functions.
+## Usage
+Check the [usage](./USAGE.md) file for detailed information on how to use Atlas and Atlas-Extra.
 
 ## FAQ
 
@@ -203,7 +178,7 @@ However, Atlas can download mod dependencies from URLs provided by their creator
 
 ---
 
-**Q: Why do I need to open the descendant world after modding it?**
+**Q: Why do I need to open the descendant world after modding it?**  
 **A:** Atlas does not finish applying a mod entirely when the import operation completes. Some changes are applied by the descendant-atlas datapack when the world is first loaded. If you import another mod before loading the world, both installations may interact before Atlas has finalized the previous one, which can cause conflicts or corrupt the installation.
 For this reason, always open the world once after importing mods before importing additional mods.
 
@@ -211,6 +186,11 @@ For this reason, always open the world once after importing mods before importin
 
 **Q: What is Atlas-Extra?**  
 **A:** Atlas-Extra is an experimental framework included with Descendant Atlas. It provides developers with a simpler and more consistent way to interact with Descendant+ data while also introducing optional features for players, including a cross-world progression system capable of transferring achievements, unlocked classes, items and other supported data between worlds.
+
+---
+
+**Q: Can new mods be imported by old versions of Atlas?**
+**A:** Atlas attempts to keep the `.dscmod` format compatible across versions whenever possible. However, newer Atlas features may require newer Atlas versions to function correctly. Keeping Atlas updated is recommended.
 
 ## Project structure
 
@@ -225,8 +205,8 @@ mods/
 ```
 
 ## Before you start
-> [!CAUTION]
-> This project is still experimental. Please make a backup before importing any files. Better safe than sorry.
+>[!CAUTION]
+>This project is still experimental. Please make a backup before importing any files. Better safe than sorry.
 
-> [!CAUTION]
-> Installing multiple modpacks without loading the world in between will cause issues: After every installation you need to run the world to finish the installing process.
+>[!CAUTION]
+>Installing multiple modpacks without loading the world in between will cause issues: After every installation you need to run the world to finish the installing process.

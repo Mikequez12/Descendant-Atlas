@@ -153,3 +153,47 @@ Improved diagnostics and developer tools.
 ### Fixes
 
 * Various bug fixes and internal improvements.
+
+# v2.0
+
+### Atlas-Extra
+
+* Added Atlas-Extra R2.
+* Atlas-Extra R2 is compatible with Descendant+ v3.6 and newer.
+* Atlas-Extra R1 remains available for Descendant+ versions up to v3.5.
+* Improved Atlas-Extra stability and compatibility.
+
+### Improvements
+
+* Improved configuration handling.
+* Improved default configuration values on macOS.
+
+### Changes
+
+* Atlas-Extra releases are now versioned independently from Descendant Atlas.
+
+### Fixes
+
+* Various bug fixes and internal improvements. 
+
+# v2.0
+
+### Atlas-Extra
+
+* Added Atlas-Extra R2.
+* Atlas-Extra R2 is compatible with Descendant+ v3.6 and newer.
+* Atlas-Extra R1 remains available for Descendant+ versions up to v3.5.
+* Improved Atlas-Extra stability and compatibility.
+
+### Improvements
+
+* Improved configuration handling.
+* Improved default configuration values on macOS.
+
+### Changes
+
+* Atlas-Extra releases are now versioned independently from Descendant Atlas.
+
+### Fixes
+
+* Various bug fixes and internal improvements.
