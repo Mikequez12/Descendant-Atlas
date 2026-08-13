@@ -64,7 +64,7 @@ if __name__ == '__main__':
             title='This world includes a saved storage. Do you want to import it?' # Thanks to sdfxf31 for the help with the `storage` word
         ) == 'Yes'
     if 'save-file' not in list(data):
-        print(f'{Color.RED}ERROR: {Color.OFF}This world doesn\'t have any exported save data. Please run {Effect.YELLOW}/function atlas-extra:save{Effect.OFF}')
+        print(f'{Color.RED}ERROR: {Color.OFF}This world doesn\'t have any exported save data. Please run {Color.YELLOW}/function atlas-extra:save{Effect.OFF}')
         exit(0)
     p_new,f_new,s_ = get_dir(f'Path to your brand new world\'s folder {Effect.DIM}(Example: %APPDATA%/.minecraft/saves/my-new-descendant-world){Effect.OFF}')
     with f_new as f:
