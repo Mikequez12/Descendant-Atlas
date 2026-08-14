@@ -21,6 +21,7 @@ import atlas_launcher
 ATLAS_VERSION = 'v2.0'
 
 
+
 with open('config.json','r',encoding='utf-8') as file:
     CONFIG = json.load(file)
 
@@ -249,6 +250,9 @@ def reset_config():
     print()
 
 def main(init_text=''):
+    with open('config.json','r',encoding='utf-8') as file:
+        CONFIG = json.load(file)
+
     print(init_text,end='')
     if not os.path.exists('config.json'):
         with open('config.json','w',encoding='utf-8') as file:file.write('{}')
