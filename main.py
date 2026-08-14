@@ -1,4 +1,5 @@
 import requests
+import sys
 from rich.console import Console
 from datetime import datetime
 from colorist import Color, Effect
